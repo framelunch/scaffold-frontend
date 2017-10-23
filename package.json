@@ -20,6 +20,7 @@
     "start": "NODE_ENV=development gulp",
     "prebuild": "run-s typecheck",
     "build": "NODE_ENV=production gulp build",
+    "build:amp": "NODE_ENV=production gulp build",
     "build:check": "run-s build server",
     "build:diff": "node tools/getBuildDiff",
     "server": "http-server ./build -p 23000 -o --cors",
