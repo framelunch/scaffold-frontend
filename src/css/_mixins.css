@@ -1,0 +1,11 @@
+@define-mixin grid-column $start, $end {
+    grid-column: $start / $end;
+    -ms-grid-column: $start;
+    -ms-grid-column-span: calc($end - $start);
+}
+
+@define-mixin grid-row $start, $end {
+    grid-row: $start / $end;
+    -ms-grid-row: $start;
+    -ms-grid-row-span: calc($end - $start);
+}

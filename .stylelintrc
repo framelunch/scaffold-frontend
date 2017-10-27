@@ -4,5 +4,17 @@
     ".tmp/**/*",
     "build/**/*",
     "src/**/_**.css"
-  ]
+  ],
+  "rules": {
+    "at-rule-no-unknown": [true, "ignoreAtRules": ["mixin", "define-mixin"]],
+    "at-rule-empty-line-before": [
+      "always",
+      "except": [
+        "blockless-after-same-name-blockless",
+        "first-nested",
+        "inside-block"
+      ],
+      ignore: ["after-comment"]
+    ]
+  }
 }
