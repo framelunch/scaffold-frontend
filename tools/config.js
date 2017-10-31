@@ -1,5 +1,3 @@
-const { browserslist } = require('../package.json');
-
 module.exports = {
   dest: {
     dev: '.tmp',
@@ -62,36 +60,15 @@ module.exports = {
   },
 
   script: {
-    src: ['src/**/*.{js,jsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
-    watch: ['src/**/*.{js,jsx}', 'src/components/**/*.{js,jsx}'],
+    src: ['src/**/*.{ts,tsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
+    watch: ['src/**/*.{ts,tsx}', 'src/components/**/*.{ts,tsx}'],
     entry: {
       vendor: [
-        // useBuiltIns: trueが効かなくなるためvendorからは外す
-        // 'babel-polyfill',
+        'babel-polyfill',
         'jquery',
       ],
-      index: './src/js/index.js',
+      index: './src/js/index.ts',
     },
-    babelOptions: {
-      presets: [
-        ['env', {
-          // package.jsonで指定したbrowserslistを利用する
-          targets: { browsers: browserslist },
-          // babel-polyfillのうちbrowserslistを踏まえて必要なものだけ読み込む
-          useBuiltIns: true,
-          // productionの場合tree shakingを有効化
-          modules: process.env.NODE_ENV === 'production' ? false : 'commonjs',
-          // developmentの際にデバッグ情報を出力する
-          debug: process.env.NODE_ENV === 'development'
-        }],
-        'flow'
-      ],
-      plugins: [
-        'transform-object-rest-spread'
-      ],
-      cacheDirectory: true,
-      babelrc: false
-    }
   },
 
   browser: {
@@ -106,4 +83,3 @@ module.exports = {
     },
   },
 };
-

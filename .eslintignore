@@ -1,6 +1,0 @@
-node_modules/**
-.tmp/**
-build/**
-tools/**
-src/libs/core/**
-gulpfile.js
