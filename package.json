@@ -21,11 +21,15 @@
       "*.{js,jsx}": [
         "prettier:script",
         "lint:script",
+        "typecheck",
         "git add"
       ],
       "*.css": [
         "prettier:style",
-        "lint:style",
+        "git add"
+      ],
+      "*.json": [
+        "prettier:json",
         "git add"
       ]
     }
@@ -46,6 +50,8 @@
     "prettier": "run-p prettier:*",
     "prettier:style": "prettier --write 'src/**/*.css' && stylelint --fix 'src/**/*.css'",
     "prettier:script": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "prettier:json": "prettier --write 'src/**/*.json'",
+    "precommit": "lint-staged",
     "_prettier:md": "prettier --write 'src/**/*.md'"
   },
   "private": true,

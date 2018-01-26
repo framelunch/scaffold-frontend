@@ -4,3 +4,5 @@ build
 flow-typed
 node_modules
 tools
+gulpfile.js
+package.json
