@@ -98,6 +98,14 @@ JSから以下のファイルをimportすることが可能なため、ケース
 * [stylelint](https://stylelint.io/)
     * [stylelint-config-framelunch](https://github.com/framelunch/stylelint-config-framelunch)
 
+### Code formatter
+
+* [Prettier](https://github.com/prettier/prettier) target filetypes ⬇️
+    * `.js`
+    * `.jsx`
+    * `.css`
+    * `.json`
+
 ## Directory Layout
 
 ```text
@@ -124,6 +132,8 @@ JSから以下のファイルをimportすることが可能なため、ケース
 |- .gitattributes           # git設定 yarn.lockをバイナリ扱いなど
 |- .gitignore               # git管理対象外を記述
 |- .node-version            # ndenv用のバージョン指定
+|- .prettierignore          # prettier対象除外設定
+|- .prettierrc              # prettier設定
 |- .stylelintrc             # stylelint設定ファイル
 |- gulpfile.js              # gulp実行ファイル
 |- package.json             # The list of 3rd party libraries for nodeJs
