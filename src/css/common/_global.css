@@ -8,7 +8,9 @@ body {
 }
 
 /* stylelint-disable-next-line */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -39,4 +41,3 @@ pre {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-

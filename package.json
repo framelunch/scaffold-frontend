@@ -15,6 +15,21 @@
     "not ie <= 10",
     "not chrome 49"
   ],
+  "lint-staged": {
+    "subTaskConcurrency": 1,
+    "linters": {
+      "*.{js,jsx}": [
+        "prettier:script",
+        "lint:script",
+        "git add"
+      ],
+      "*.css": [
+        "prettier:style",
+        "lint:style",
+        "git add"
+      ]
+    }
+  },
   "scripts": {
     "postinstall": "flow-typed install",
     "start": "NODE_ENV=development gulp",
@@ -28,7 +43,10 @@
     "lint": "run-p lint:*",
     "lint:style": "stylelint 'src/**/*.css'",
     "lint:script": "eslint --ext .js,.jsx src/",
-    "prettier": "prettier-eslint --write 'src/**/*.{js,jsx}'"
+    "prettier": "run-p prettier:*",
+    "prettier:style": "prettier --write 'src/**/*.css' && stylelint --fix 'src/**/*.css'",
+    "prettier:script": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "_prettier:md": "prettier --write 'src/**/*.md'"
   },
   "private": true,
   "dependencies": {
@@ -72,8 +90,10 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-wait": "^0.0.2",
     "http-server": "^0.10.0",
+    "husky": "^0.14.3",
     "imagemin-mozjpeg": "^6.0.0",
     "imagemin-pngquant": "^5.0.1",
+    "lint-staged": "^6.1.0",
     "npm-run-all": "^4.1.1",
     "postcss-color-hex-alpha": "^3.0.0",
     "postcss-custom-media": "^6.0.0",
