@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+{{#with index}}
+  {{include './common/_head.hbs'}}
+{{/with}}
+<body>
+  <main id="main" class="main" role="main">
+  {{#times 5}}
+    <div class="panel-{{add this 1}}">{{add this 1}}</div>
+  {{/times}}
+  </main>
+
+  {{#with index}}
+    {{include './common/_foot.hbs'}}
+  {{/with}}
+</body>
+</html>

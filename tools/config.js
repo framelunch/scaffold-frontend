@@ -63,28 +63,11 @@ module.exports = {
   },
 
   view: {
-    src: ['src/views/**/*.ejs', '!src/views/**/_*'],
-    watch: ['src/views/**/*.ejs'],
-    rename(path) {
-      // TODO: ちょっと複雑感あるので、一旦コメントアウト
-      // if (path.basename === 'index') {
-      //   return;
-      // }
-
-      // let basename = 'index';
-      // let dirname = `${path.dirname}/`;
-
-      // dirname += path.basename.split('.').reduce((str, item) => {
-      //   if (item.charAt(0) === '_') {
-      //     basename = item.substr(1);
-      //   } else {
-      //     str += `${item}/`;
-      //   }
-      //   return str;
-      // }, '');
-
-      // path.basename = basename;
-      // path.dirname = dirname;
+    src: ['src/views/**/*.hbs', '!src/views/**/_*'],
+    watch: ['src/views/**/*.hbs'],
+    rename(data) {
+      data.extname = '.html';
+      return data;
     },
   },
 
