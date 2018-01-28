@@ -51,8 +51,7 @@
     "prettier:style": "prettier --write 'src/**/*.css' && stylelint --fix 'src/**/*.css'",
     "prettier:script": "prettier --write 'src/**/*.{js,jsx}'",
     "prettier:json": "prettier --write 'src/**/*.json'",
-    "precommit": "lint-staged",
-    "_prettier:md": "prettier --write 'src/**/*.md'"
+    "precommit": "lint-staged"
   },
   "private": true,
   "dependencies": {
