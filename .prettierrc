@@ -10,3 +10,8 @@ overrides:
   options:
     tabWidth: 4
     singleQuote: false
+- files: "*.json"
+  options:
+    tabWidth: 4
+    singleQuote: false
+

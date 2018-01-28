@@ -22,15 +22,15 @@
         "prettier:script",
         "lint:script",
         "typecheck",
-        "git add"
+        "git add ."
       ],
       "*.css": [
         "prettier:style",
-        "git add"
+        "git add ."
       ],
       "*.json": [
         "prettier:json",
-        "git add"
+        "git add ."
       ]
     }
   },
@@ -49,7 +49,7 @@
     "lint:script": "eslint --ext .js,.jsx src/",
     "prettier": "run-p prettier:*",
     "prettier:style": "prettier --write 'src/**/*.css' && stylelint --fix 'src/**/*.css'",
-    "prettier:script": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "prettier:script": "prettier --write 'src/**/*.{js,jsx}'",
     "prettier:json": "prettier --write 'src/**/*.json'",
     "precommit": "lint-staged",
     "_prettier:md": "prettier --write 'src/**/*.md'"
@@ -112,8 +112,6 @@
     "postcss-simple-vars": "^4.1.0",
     "postcss-url": "^7.1.2",
     "prettier": "^1.9.2",
-    "prettier-eslint": "^8.7.0",
-    "prettier-eslint-cli": "^4.7.0",
     "raw-loader": "^0.5.1",
     "require-dir": "^0.3.2",
     "rimraf": "^2.6.2",
