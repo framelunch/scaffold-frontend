@@ -21,7 +21,6 @@
       "*.{js,jsx}": [
         "prettier:script",
         "lint:script",
-        "typecheck",
         "git add ."
       ],
       "*.css": [
@@ -45,6 +44,7 @@
     "server": "http-server ./build -p 23000 -o --cors",
     "spreadsheet": "node tools/spreadsheetToJson",
     "typecheck": "flow",
+    "safe-guard": "lint-staged",
     "lint": "run-p lint:*",
     "lint:style": "stylelint 'src/**/*.css'",
     "lint:script": "eslint --ext .js,.jsx src/",
@@ -52,7 +52,7 @@
     "prettier:style": "prettier --write 'src/**/*.css'",
     "prettier:script": "prettier --write 'src/**/*.{js,jsx}'",
     "prettier:json": "prettier --write 'src/**/*.json'",
-    "precommit": "lint-staged"
+    "precommit": "run-s typecheck safe-guard"
   },
   "private": true,
   "dependencies": {
