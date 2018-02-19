@@ -11,6 +11,7 @@
   "browserslist": [
     "ie 11",
     "ios >= 10",
+    "android >= 4.4",
     "> 1% in JP",
     "not ie <= 10",
     "not chrome 49"
@@ -18,19 +19,24 @@
   "lint-staged": {
     "subTaskConcurrency": 1,
     "linters": {
-      "*.{js,jsx}": [
+      "*.js": [
         "prettier:script",
         "lint:script",
-        "git add ."
+        "git add src/**/*.js"
+      ],
+      "*.jsx": [
+        "prettier:script",
+        "lint:script",
+        "git add src/**/*.jsx"
       ],
       "*.css": [
         "prettier:style",
         "lint:style",
-        "git add ."
+        "git add src/**/*.css"
       ],
       "*.json": [
         "prettier:json",
-        "git add ."
+        "git add *.json"
       ]
     }
   },
@@ -50,7 +56,7 @@
     "lint:script": "eslint --ext .js,.jsx src/",
     "prettier": "run-p prettier:*",
     "prettier:style": "prettier --write 'src/**/*.css'",
-    "prettier:script": "prettier --write 'src/**/*.{js,jsx}'",
+    "prettier:script": "eslint --ext .ts --fix 'src/**/*.{js,jsx}'",
     "prettier:json": "prettier --write 'src/**/*.json'",
     "precommit": "run-s typecheck safe-guard"
   },
@@ -78,7 +84,9 @@
     "dotenv": "^4.0.0",
     "eslint": "^4.3.0",
     "eslint-config-framelunch": "framelunch/eslint-config-framelunch#v0.2.3",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-flowtype-errors": "^3.3.4",
+    "eslint-plugin-prettier": "^2.6.0",
     "flow-bin": "^0.54.1",
     "flow-typed": "^2.1.5",
     "fs-extra": "^4.0.2",
