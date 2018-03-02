@@ -14,6 +14,7 @@ module.exports = {
     path: conf.script.dll.path.dll,
     filename: 'vendor.dll.js',
   },
+  mode: 'production',
   plugins: [
     new webpack.DefinePlugin({
       NODE_ENV: '"production"',
@@ -22,6 +23,5 @@ module.exports = {
       path: conf.script.dll.path.manifest,
       name: conf.script.dll.library,
     }),
-    new webpack.optimize.UglifyJsPlugin(),
   ],
 };
