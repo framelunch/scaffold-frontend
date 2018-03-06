@@ -19,24 +19,18 @@
   "lint-staged": {
     "subTaskConcurrency": 1,
     "linters": {
-      "*.js": [
-        "prettier:script",
-        "lint:script",
-        "git add src/**/*.js"
-      ],
-      "*.jsx": [
-        "prettier:script",
-        "lint:script",
-        "git add src/**/*.jsx"
+      "*.{js,jsx}": [
+        "eslint --ext .js,.jsx --fix",
+        "git add"
       ],
       "*.css": [
-        "prettier:style",
-        "lint:style",
-        "git add src/**/*.css"
+        "prettier --write",
+        "stylelint",
+        "git add"
       ],
       "*.json": [
-        "prettier:json",
-        "git add *.json"
+        "prettier --write",
+        "git add"
       ]
     }
   },
@@ -56,10 +50,10 @@
     "lint": "run-p lint:*",
     "lint:style": "stylelint 'src/**/*.css'",
     "lint:script": "eslint --ext .js,.jsx src/",
-    "prettier": "run-p prettier:*",
-    "prettier:style": "prettier --write 'src/**/*.css'",
-    "prettier:script": "eslint --ext .ts --fix 'src/**/*.{js,jsx}'",
-    "prettier:json": "prettier --write 'src/**/*.json'",
+    "fix": "run-p prettier:*",
+    "fix:style": "prettier --write 'src/**/*.css'",
+    "fix:script": "eslint --ext .js,.jsx --fix 'src/**/*.{js,jsx}'",
+    "fix:json": "prettier --write 'src/**/*.json'",
     "precommit": "run-s typecheck safe-guard"
   },
   "private": true,
