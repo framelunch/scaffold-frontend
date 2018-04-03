@@ -74,8 +74,6 @@ JSから以下のファイルをimportすることが可能なため、ケース
     * [postcss-loader](https://github.com/postcss/postcss-loader)
     * [postcss-nested](https://github.com/postcss/postcss-nested)
     * [postcss-url](https://github.com/postcss/postcss-url)
-    * [postcss-mixins(Grid layout対策以外での利用非推奨)](https://github.com/postcss/postcss-mixins)
-    * [postcss-simple-vars(利用非推奨)](https://github.com/postcss/postcss-simple-vars)
 
 `background-image` などのCSSでのurl指定を相対パスで行った場合、inline化される。
 
@@ -174,7 +172,7 @@ commit時に勝手にコードを整形してくれる。
 
 #### IntelliJ設定
 
-[この辺](https://qiita.com/kouchi67/items/6d3b5cf66f57c4ff6600)を参考に。
+拡張を入れて色々やるといいらしいです(未検証)
 
 ### Spreadsheet setting
 
