@@ -9,8 +9,6 @@ const customMedia = require('postcss-custom-media');
 const hexAlpha = require('postcss-color-hex-alpha');
 const cssFixes = require('postcss-fixes');
 const url = require('postcss-url');
-const simpleVars = require('postcss-simple-vars');
-const mixins = require('postcss-mixins');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const browser = require('browser-sync');
@@ -26,9 +24,7 @@ gulp.task('style', () => (
       customProperties,
       customMedia,
       nested,
-      mixins,
       hexAlpha,
-      simpleVars,
       cssFixes,
       url(conf.style.urlOption),
       autoprefixer(conf.style.autoprefixerOption)
@@ -45,9 +41,7 @@ gulp.task('b.style', () => (
       customProperties,
       customMedia,
       nested,
-      mixins,
       hexAlpha,
-      simpleVars,
       cssFixes,
       url(conf.style.urlOption),
       autoprefixer(conf.style.autoprefixerOption),
