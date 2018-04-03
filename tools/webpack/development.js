@@ -3,7 +3,8 @@ const webpack = require('webpack');
 const conf = require('../config');
 const base = require('./base');
 
-module.exports = Object.assign({}, base, {
+module.exports = {
+  ...base,
   mode: 'development',
   devtool: 'inline-source-map',
   plugins: [
@@ -13,4 +14,4 @@ module.exports = Object.assign({}, base, {
       context: process.cwd(),
     }),
   ]
-});
+};
