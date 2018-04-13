@@ -6,12 +6,11 @@
   "author": "Yuichi Ikeda <ikeda@framelunch.jp>",
   "license": "MIT",
   "engines": {
-    "node": ">=6.11.0"
+    "node": ">=8.11.1"
   },
   "browserslist": [
     "ie 11",
     "ios >= 10",
-    "android >= 4.4",
     "> 1% in JP",
     "not ie <= 10",
     "not chrome 49"
@@ -20,7 +19,7 @@
     "subTaskConcurrency": 1,
     "linters": {
       "*.{js,jsx}": [
-        "eslint --ext .js,.jsx --fix",
+        "eslint --fix",
         "git add"
       ],
       "*.css": [
