@@ -196,9 +196,6 @@ tags
 /build
 # build files (difference files)
 /build_diff
-# build files (JS dll)
-/assets/lib/js/vendor.dll.js
-/assets/lib/vendor-manifest.json
 # spreadsheet key
 /tools/serviceAccountKey.json
 # spreadsheet parsed data

@@ -12,6 +12,12 @@ module.exports = {
     filename: '[name].js',
     sourceMapFilename: '[name].map', //inline-source-mapの時は特に必要ないが一応
   },
+  optimization: {
+    splitChunks: {
+      name: 'vendor',
+      chunks: 'initial',
+    }
+  },
   resolve: {
     modules: [
       'node_modules',
@@ -76,4 +82,3 @@ module.exports = {
     ],
   },
 };
-

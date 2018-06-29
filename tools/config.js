@@ -3,8 +3,6 @@ const path = require('path');
 
 const { browserslist: browsers } = require('../package.json');
 
-const manifestPath = path.join(__dirname, '..', 'assets', 'lib', 'vendor-manifest.json');
-
 module.exports = {
   dest: {
     dev: '.tmp',
@@ -110,26 +108,6 @@ module.exports = {
     watch: ['src/**/*.{js,jsx}', 'src/components/**/*.{js,jsx}'],
     entry: {
       index: './src/js/index.js',
-    },
-    dll: {
-      path: {
-        dll: path.join(__dirname, '..', 'assets', 'lib', 'js'),
-        manifest: manifestPath,
-      },
-      ignore: [
-        'babel-polyfill',
-        'date-fns',
-        'libraries-frontend-framelunch',
-      ],
-      library: '[name]_library',
-      manifest: (() => {
-        try {
-          fs.statSync(manifestPath);
-          return require(manifestPath);
-        } catch (_error) {
-          return {};
-        }
-      })(),
     },
     babelOptions: {
       presets: [
