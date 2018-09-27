@@ -34,9 +34,13 @@
     }
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development gulp",
+    "start": "run-p start:*",
+    "start:gulp": "cross-env NODE_ENV=development gulp",
+    "start:webpack": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --history-api-fallback --progress --color --config tools/webpack/development.js",
     "prebuild": "run-s typecheck",
-    "build": "cross-env NODE_ENV=production gulp build",
+    "build": "run-s build:gulp build:webpack",
+    "build:gulp": "cross-env NODE_ENV=production gulp build",
+    "build:webpack": "cross-env NODE_ENV=production webpack --progress --config tools/webpack/production.js",
     "build:check": "run-s build server",
     "build:diff": "node tools/getBuildDiff",
     "server": "http-server ./build -p 23000 -o --cors",
@@ -125,6 +129,7 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9",
     "webpack-stream": "^5.1.1"
   }
 }

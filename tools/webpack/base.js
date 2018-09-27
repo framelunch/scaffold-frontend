@@ -9,12 +9,13 @@ const conf = require('../config');
 module.exports = {
   entry: conf.script.entry,
   output: {
+    path: path.join(process.cwd(), conf.dest.build),
     filename: '[name].js',
-    sourceMapFilename: '[name].map', //inline-source-mapの時は特に必要ないが一応
+    publicPath: '/',
   },
   optimization: {
     splitChunks: {
-      name: 'vendor',
+      name: 'js/vendor.bundle',
       chunks: 'initial',
     }
   },

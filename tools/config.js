@@ -1,9 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const { browserslist: browsers } = require('../package.json');
+
+const ports = {
+  browserSync: 9012,
+  webpackDevServer: 13000,
+};
 
 module.exports = {
+  ports,
   dest: {
     dev: '.tmp',
     build: 'build',
@@ -107,7 +112,7 @@ module.exports = {
     src: ['src/**/*.{js,jsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
     watch: ['src/**/*.{js,jsx}', 'src/components/**/*.{js,jsx}'],
     entry: {
-      index: './src/js/index.js',
+      'js/index': './src/js/index.js',
     },
   },
 
@@ -139,14 +144,9 @@ module.exports = {
 
   browser: {
     notify: false,
-    port: 9012,
+    port: ports.browserSync,
+    proxy: `http://localhost:${ports.webpackDevServer}`,
     reloadDebounce: 500,
-    server: {
-      baseDir: ['.tmp'],
-      routes: {
-        '/': 'assets',
-      },
-    },
   },
 };
 
