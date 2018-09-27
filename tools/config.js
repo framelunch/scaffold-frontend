@@ -109,27 +109,6 @@ module.exports = {
     entry: {
       index: './src/js/index.js',
     },
-    babelOptions: {
-      presets: [
-        ['env', {
-          // package.jsonで指定したbrowserslistを利用する
-          targets: { browsers },
-          // babel-polyfillのうちbrowserslistを踏まえて必要なものだけ読み込む
-          useBuiltIns: true,
-          // productionの場合tree shakingを有効化
-          modules: process.env.NODE_ENV === 'production' ? false : 'commonjs',
-          // developmentの際にデバッグ情報を出力する
-          debug: process.env.NODE_ENV === 'development',
-        }],
-        'flow',
-      ],
-      plugins: [
-        'transform-object-rest-spread',
-        'date-fns',
-      ],
-      cacheDirectory: true,
-      babelrc: false,
-    },
   },
 
   spreadsheet: {

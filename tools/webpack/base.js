@@ -31,10 +31,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           'cache-loader',
-          {
-            loader: 'babel-loader',
-            options: conf.script.babelOptions
-          }
+          'babel-loader',
         ],
       },
       {
