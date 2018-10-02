@@ -102,7 +102,6 @@ module.exports = {
     urlOption: { filter: ['./**/*'], url: 'inline' },
     autoprefixerOption: { grid: true },
     cssnanoOption: {
-      // for postcss-fixes  https://www.npmjs.com/package/postcss-fixes#recommended-usage
       safe: true,
       calc: false,
     },

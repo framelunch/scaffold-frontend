@@ -7,7 +7,8 @@ const nested = require('postcss-nested');
 const importCss = require('postcss-import');
 const customMedia = require('postcss-custom-media');
 const hexAlpha = require('postcss-color-hex-alpha');
-const cssFixes = require('postcss-fixes');
+const calc = require('postcss-calc');
+const flexbugsFixes = require('postcss-flexbugs-fixes');
 const url = require('postcss-url');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -25,7 +26,8 @@ gulp.task('style', () => (
       customMedia,
       nested,
       hexAlpha,
-      cssFixes,
+      calc,
+      flexbugsFixes,
       url(conf.style.urlOption),
       autoprefixer(conf.style.autoprefixerOption)
     ]))
@@ -42,7 +44,8 @@ gulp.task('b.style', () => (
       customMedia,
       nested,
       hexAlpha,
-      cssFixes,
+      calc,
+      flexbugsFixes,
       url(conf.style.urlOption),
       autoprefixer(conf.style.autoprefixerOption),
       cssnano(conf.style.cssnanoOption),
