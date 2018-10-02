@@ -47,17 +47,7 @@ module.exports = {
               modules: true
             }
           },
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: (loader) => [
-                customProperties,
-                nested,
-                importCss({root: loader.resourcePath}),
-                autoprefixer(conf.style.autoprefixerOption)
-              ],
-            }
-          }
+          'postcss-loader',
         ]
       },
       {
