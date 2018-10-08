@@ -37,6 +37,9 @@
 %>
     <link rel="stylesheet" href="<%= style.match(/^https?:/) != null ? style : `/css/${style}` %>">
 <% }) %>
+<% if (typeof conf.ldJson === 'object') { %>
+    <script type="application/ld+json"><%- JSON.stringify(conf.ldJson) %></script>
+<% } %>
 
 </head>
 <body>
