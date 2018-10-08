@@ -11,26 +11,23 @@ import subscribeEvents from './modules/_events';
 class Main {
   constructor() {
     this.setTouchEventsToJQuery();
-    this.onDOMContentLoaded = this.onDOMContentLoaded.bind(this);
-    this.onWindowResize = this.onWindowResize.bind(this);
-    this.onScrollTop = this.onScrollTop.bind(this);
   }
 
   setTouchEventsToJQuery() {
     touchEvents($);
   }
 
-  onDOMContentLoaded() {
+  onDOMContentLoaded = () => {
     console.log(`DOMContentLoaded: ${format(new Date())}`);
-  }
+  };
 
-  onWindowResize($window) {
+  onWindowResize = $window => {
     console.log('onWindowResize:', $window.width(), $window.height());
-  }
+  };
 
-  onScrollTop(scrollTop) {
+  onScrollTop = scrollTop => {
     console.log('scrollTop:', scrollTop);
-  }
+  };
 }
 
 const main = new Main();
