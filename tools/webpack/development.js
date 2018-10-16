@@ -22,7 +22,11 @@ module.exports = {
   ],
   devServer: {
     publicPath: base.output.publicPath,
-    contentBase: [path.join(process.cwd(), conf.dest.dev), path.join(process.cwd(), 'assets')],
+    contentBase: [
+      path.join(process.cwd(), conf.dest.dev),
+      path.join(process.cwd(), 'assets'),
+      path.join(process.cwd(), '_template'),
+    ],
     port: conf.ports.webpackDevServer,
   },
 };
