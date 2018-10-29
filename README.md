@@ -20,11 +20,13 @@ yarn start
 # create production files
 yarn build
 # create difference production files
-yarn build:diff <CHECKOUT_TARGET ex:commitid, tagname, branch...>
+yarn build:diff <CHECKOUT_TARGET>
 # check JavaScript types
 yarn typecheck
 # check codes quality
 yarn lint
+# fix codes format
+yarn fix
 # check build files
 yarn build:check
 ```
@@ -109,6 +111,7 @@ JSから以下のファイルをimportすることが可能なため、ケース
 
 ```text
 .
+|- /_template/              # 静的リソース dev serverで読み込まれるがbuild時には無視される
 |- /.github/                # GitHub用issue, PRテンプレ
 |- /assets/                 # 静的リソース build時にそのままrootに展開されます
 |- /build/                  # yarn buildコマンドで生成されるコンパイル済みファイル
@@ -134,8 +137,10 @@ JSから以下のファイルをimportすることが可能なため、ケース
 |- .prettierignore          # prettier対象除外設定
 |- .prettierrc              # prettier設定
 |- .stylelintrc             # stylelint設定ファイル
+|- babel.config.js          # babel設定
 |- gulpfile.js              # gulp実行ファイル
 |- package.json             # The list of 3rd party libraries for nodeJs
+|- postcss.config.js        # PostCSS設定
 |- README.md                # README
 |- yarn.lock                # yarn用利用npmsバージョン管理ファイル
 ```

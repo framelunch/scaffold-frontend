@@ -2,7 +2,10 @@
   "extends": ["stylelint-config-framelunch"],
   "ignoreFiles": [
     ".tmp/**/*",
-    "build/**/*"
+    "build/**/*",
+    "_template/**/*",
+    "assets/**/*",
+    "src/assets/**/*",
   ],
   "rules": {
     "max-line-length": null,
@@ -24,6 +27,5 @@
     "block-opening-brace-space-before": null,
     "number-leading-zero": null,
     "number-no-trailing-zeros": null,
-
   }
 }

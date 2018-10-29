@@ -1,4 +1,6 @@
+_template
 assets
+src/assets
 .tmp
 build
 flow-typed
