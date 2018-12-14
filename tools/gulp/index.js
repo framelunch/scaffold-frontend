@@ -1,30 +1,46 @@
 const gulp = require('gulp');
-const runSequence = require('run-sequence');
 
 const conf = require('../config');
 
-gulp.task('dev', cb => runSequence('clean', 'style', 'view', 'server', cb));
+/*
+ * build
+ */
+if (conf.rev.isEnable) {
+  gulp.task(
+    'build',
+    gulp.series(
+      'b.clean',
+      'b.style',
+      'b.view',
+      gulp.parallel(...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'),
+      'rev',
+      'rev.replace',
+    ),
+  );
+} else {
+  gulp.task(
+    'build',
+    gulp.series(
+      'b.clean',
+      'b.style',
+      'b.view',
+      gulp.parallel(...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'),
+    ),
+  );
+}
 
-gulp.task('default', ['dev'], () => {
-  gulp.watch(conf.view.watch, ['view']);
-  gulp.watch(conf.style.watch, ['style']);
-});
-
-gulp.task('build', cb => conf.rev.isEnable ?
-  runSequence(
-    'b.clean',
-    'b.style',
-    'b.view',
-    [...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'],
-    'rev',
-    'rev.replace',
-    cb
-  ) :
-  runSequence(
-    'b.clean',
-    'b.style',
-    'b.view',
-    [...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'],
-    cb
-  )
+/*
+ * default
+ */
+gulp.task(
+  'default',
+  gulp.series(
+    'clean',
+    'style',
+    'view',
+    gulp.parallel('server', () => {
+      gulp.watch(conf.view.watch, gulp.task('view'));
+      gulp.watch(conf.style.watch, gulp.task('style'));
+    }),
+  ),
 );
