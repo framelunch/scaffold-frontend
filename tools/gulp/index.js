@@ -5,29 +5,22 @@ const conf = require('../config');
 /*
  * build
  */
-if (conf.rev.isEnable) {
-  gulp.task(
-    'build',
-    gulp.series(
-      'b.clean',
-      'b.style',
-      'b.view',
-      gulp.parallel(...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'),
-      'rev',
-      'rev.replace',
-    ),
-  );
-} else {
-  gulp.task(
-    'build',
-    gulp.series(
-      'b.clean',
-      'b.style',
-      'b.view',
-      gulp.parallel(...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'),
-    ),
-  );
+
+const buildTasks = [
+  'b.clean',
+  'b.style',
+  'b.view',
+  gulp.parallel(...Object.keys(conf.copy).map(key => `copy:${key}`), 'image'),
+];
+if (conf.image.createWebp) {
+  buildTasks.push('image:webp');
+  buildTasks.push('image:gif2webp');
 }
+if (conf.rev.isEnable) {
+  buildTasks.push('rev');
+  buildTasks.push('rev.replace');
+}
+gulp.task('build', gulp.series(...buildTasks));
 
 /*
  * default

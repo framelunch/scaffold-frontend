@@ -22,7 +22,8 @@ module.exports = {
   },
 
   image: {
-    src: ['assets/**/*.{jpg,jpeg,gif,png}'],
+    createWebp: false,
+    src: ['assets/**/*.{jpg,jpeg,png}', 'assets/**/*.gif'],
     // PNG形式: https://www.npmjs.com/package/imagemin-pngquant
     png: {
       // クオリティ 0(やり過ぎ) ~ 1(ほぼそのまま)
@@ -49,6 +50,13 @@ module.exports = {
     },
     // SVG形式: https://github.com/svg/svgo#what-it-can-do
     svg: {},
+    // WebP形式: https://github.com/imagemin/imagemin-webp#imagemin-webp-
+    webp: {
+      quality: 80,
+    },
+    gif2webp: {
+      quality: 80,
+    },
   },
 
   rev: {
