@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const conf = require('../config');
 const base = require('./base');
@@ -16,9 +17,28 @@ module.exports = {
   }, {}),
   mode: 'development',
   devtool: 'inline-source-map',
+  module: {
+    rules: [
+      ...base.module.rules,
+      {
+        test: /\.[jt]sx?$/,
+        exclude: /node_modules/,
+        use: [
+          'cache-loader',
+          {
+            loader: 'ts-loader',
+            options: {
+              transpileOnly: true,
+            },
+          },
+        ],
+      },
+    ],
+  },
   plugins: [
     new webpack.DefinePlugin({ 'process.env.NODE_ENV': "'development'" }),
     new webpack.NamedModulesPlugin(),
+    new ForkTsCheckerWebpackPlugin(),
   ],
   devServer: {
     publicPath: base.output.publicPath,

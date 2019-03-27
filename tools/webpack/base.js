@@ -17,24 +17,14 @@ module.exports = {
     splitChunks: {
       name: 'js/vendor.bundle',
       chunks: 'initial',
-    }
+    },
   },
   resolve: {
-    modules: [
-      'node_modules',
-    ],
+    modules: ['node_modules'],
     extensions: ['json', '.jsx', '.js'],
   },
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: [
-          'cache-loader',
-          'babel-loader',
-        ],
-      },
       {
         test: /\.css$/,
         use: [
@@ -44,28 +34,28 @@ module.exports = {
             options: {
               importLoaders: 1,
               localIdentName: '[name]-[local]-[hash:base64:5]',
-              modules: true
-            }
+              modules: true,
+            },
           },
           'postcss-loader',
-        ]
+        ],
       },
       {
         test: /\.(jpg|png|gif)$/,
         use: {
           loader: 'url-loader',
           options: {
-            name: '[name].[ext]'
-          }
-        }
+            name: '[name].[ext]',
+          },
+        },
       },
       {
         test: /\.svg$/,
-        use: 'svg-inline-loader'
+        use: 'svg-inline-loader',
       },
       {
         test: /\.(txt|log|md)$/,
-        use: 'raw-loader'
+        use: 'raw-loader',
       },
     ],
   },
