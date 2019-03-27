@@ -18,7 +18,7 @@
   "lint-staged": {
     "subTaskConcurrency": 1,
     "linters": {
-      "*.{js,jsx}": [
+      "*.{js,jsx,ts,tsx}": [
         "eslint --fix",
         "git add"
       ],
@@ -45,37 +45,31 @@
     "build:diff": "node tools/getBuildDiff",
     "server": "http-server ./build -p 23000 -o --cors",
     "spreadsheet": "node tools/spreadsheetToJson",
-    "typecheck": "flow",
-    "typeinstall": "flow-typed install",
+    "typecheck": "tsc --noEmit -p tsconfig.production.json",
     "safe-guard": "lint-staged",
     "lint": "run-p lint:*",
     "lint:style": "stylelint 'src/**/*.css'",
-    "lint:script": "eslint --ext .js,.jsx src/",
+    "lint:script": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "fix": "run-p fix:*",
     "fix:style": "prettier --write 'src/**/*.css'",
-    "fix:script": "eslint --ext .js,.jsx --fix 'src/**/*.{js,jsx}'",
+    "fix:script": "eslint --ext .js,.jsx,.ts,.tsx --fix src/",
     "fix:json": "prettier --write 'src/**/*.json'"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s typecheck safe-guard"
+      "pre-commit": "run-s safe-guard"
     }
   },
   "private": true,
   "dependencies": {
-    "@babel/polyfill": "^7.4.0",
     "date-fns": "^1.30.1",
     "jquery": "^3.2.1",
     "jquery-touch-events": "^1.0.7",
     "libraries-frontend-framelunch": "framelunch/libraries-frontend-framelunch#0.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "@babel/preset-flow": "^7.0.0",
+    "@typescript-eslint/eslint-plugin": "^1.5.0",
     "autoprefixer": "^9.5.0",
-    "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.3",
     "cache-loader": "^2.0.1",
     "child_process": "^1.0.2",
@@ -84,13 +78,12 @@
     "cssnano": "^4.1.10",
     "dotenv": "^7.0.0",
     "eslint": "^5.15.3",
-    "eslint-config-framelunch": "framelunch/eslint-config-framelunch#v0.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-flowtype-errors": "^4.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-import-resolver-webpack": "^0.11.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "flow-bin": "^0.95.1",
-    "flow-typed": "^2.1.5",
     "fork-ts-checker-webpack-plugin": "^1.0.0",
     "fs-extra": "^7.0.1",
     "google-spreadsheet": "^2.0.7",

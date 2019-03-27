@@ -106,8 +106,8 @@ module.exports = {
   },
 
   script: {
-    src: ['src/**/*.{js,jsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
-    watch: ['src/**/*.{js,jsx}', 'src/components/**/*.{js,jsx}'],
+    src: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
+    watch: ['src/**/*.{js,jsx,ts,tsx}', 'src/components/**/*.{js,jsx,ts,tsx}'],
     entry: {
       'js/index': './src/js/index.js',
     },
