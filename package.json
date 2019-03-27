@@ -23,8 +23,7 @@
         "git add"
       ],
       "*.css": [
-        "prettier --write",
-        "stylelint",
+        "stylelint --fix",
         "git add"
       ],
       "*.json": [
@@ -51,7 +50,7 @@
     "lint:style": "stylelint 'src/**/*.css'",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx src/",
     "fix": "run-p fix:*",
-    "fix:style": "prettier --write 'src/**/*.css'",
+    "fix:style": "stylelint --fix 'src/**/*.css'",
     "fix:script": "eslint --ext .js,.jsx,.ts,.tsx --fix src/",
     "fix:json": "prettier --write 'src/**/*.json'"
   },
@@ -123,6 +122,7 @@
     "rimraf": "^2.6.3",
     "style-loader": "^0.23.1",
     "stylelint-config-framelunch": "framelunch/stylelint-config-framelunch#v0.4.0",
+    "stylelint-config-prettier": "^5.0.0",
     "svg-inline-loader": "^0.8.0",
     "ts-loader": "^5.3.3",
     "typescript": "^3.3.4000",
