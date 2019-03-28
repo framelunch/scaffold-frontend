@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
+const dotenv = require('dotenv').config();
 
 const ports = {
-  browserSync: 9012,
-  webpackDevServer: 13000,
+  browserSync: parseInt(process.env.PORT_DEV, 10) || 9012,
+  webpackDevServer: parseInt(process.env.PORT_WDS, 10) || 13000,
 };
 exports.ports = ports;
 
@@ -21,7 +22,7 @@ exports.copy = {
 };
 
 exports.image = {
-  createWebp: false,
+  createWebp: process.env.USE_WEBP === 'true',
   src: ['assets/**/*.{jpg,jpeg,png}', 'assets/**/*.gif'],
   // PNG形式: https://www.npmjs.com/package/imagemin-pngquant
   png: {
@@ -75,7 +76,7 @@ exports.view = {
   watch: ['src/views/**/*.ejs'],
 };
 
-const useScss = false;
+const useScss = process.env.USE_SCSS === 'true';
 exports.style = {
   useScss,
   src: [`src/**/*.${useScss ? 's' : ''}css`, '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],

@@ -1,3 +1,3 @@
 // @flow
 
-export const author = 'http://framelunch.jp';
+export const author = process.env.AUTHOR;

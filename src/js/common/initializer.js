@@ -7,4 +7,6 @@
 import '../modules/DeviceChecker';
 import * as Configs from './config';
 
-console.log('Dev by', Configs.author);
+if (Configs.author) {
+  console.log('Dev by', Configs.author);
+}

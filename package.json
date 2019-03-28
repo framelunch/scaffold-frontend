@@ -75,6 +75,7 @@
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",
     "dotenv": "^7.0.0",
+    "dotenv-webpack": "^1.7.0",
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^4.1.0",
