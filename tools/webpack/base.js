@@ -22,21 +22,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              localIdentName: '[name]-[local]-[hash:base64:5]',
-              modules: true,
-            },
-          },
-          'postcss-loader',
-        ],
-      },
-      {
         test: /\.(jpg|png|gif)$/,
         use: {
           loader: 'url-loader',
@@ -50,7 +35,7 @@ module.exports = {
         use: 'svg-inline-loader',
       },
       {
-        test: /\.(txt|log|md)$/,
+        test: /\.(txt|log|md|frag|vert|glsl)$/,
         use: 'raw-loader',
       },
     ],
