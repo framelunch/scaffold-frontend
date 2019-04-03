@@ -1,6 +1,6 @@
 {
   "name": "scaffold-frontend",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "main": "index.js",
   "repository": "git@github.com:framelunch/scaffold-frontend.git",
   "author": "Yuichi Ikeda <ikeda@framelunch.jp>",
