@@ -32,7 +32,7 @@ module.exports = {
       // use <root>/tsconfig.json
       typescript: {},
       webpack: {
-        config: './tools/webpack/server/production.js',
+        config: './tools/webpack/production.js',
       },
     },
     // importの際にあーだこーだ言われたくないものを
