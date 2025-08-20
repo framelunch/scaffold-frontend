@@ -1,17 +1,3 @@
-<% if (typeof conf.ga === 'string' && conf.ga.length > 0) { %>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', '<%= conf.ga %>', 'auto');
-    ga('send', 'pageview');
-</script>
-<% } %>
-
-<script src="/js/vendor.bundle.js"></script>
 <%
 conf.script = conf.script || [];
 if (typeof conf.script === 'string') {
@@ -19,7 +5,206 @@ if (typeof conf.script === 'string') {
 }
 conf.script.forEach(script => {
 %>
-<script src="<%= script.match(/^https?:/) != null ? script : `/js/${script}` %>"></script>
+<script src="<%= script.match(/^https?:/) != null ? script : `${script}` %>"></script>
 <% }) %>
+        <!-- /*************************************** 編集可能領域 body(メインコンテンツ) end *************************************** -->
+        <!-- /********** AEM dialog input end ********** -->
+    </article>
+
+    <div id="bukken_migration_footer">
+        <aside class="recommend_set">
+            <section class="slider history">
+                <h1 class="ttl01">これまでに見た物件</h1>
+            </section>
+            <section class="slider recommend">
+                <h1 class="ttl01">あなたにおすすめの物件</h1>
+                <div id="wrap_width">
+
+            </section>
+        </aside>
+        <footer>
+            <!--三井不動産レジデンシャルの住まいと暮らしのサイト、三井不動産グループ各社のサイト紹介のいずれかバナー設定あり -->
+
+            <div id="footer_bnr">
+                <div class="onlypc">
+                    <!--三井のすまいサイト　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産レジデンシャルの住まい情報総合サイト</span>
+                    </p>
+                    <ul class="c-column c-column04 cf">
+                        <li>
+                            <a href="https://www.31sumai.com/" target="_blank">
+                                <img src="/apps/settings/wcm/designs/31sumai/common/img/bnr_31sumai.png" alt="三井のすまい">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <!--三井不動産レジデンシャルの住まいと暮らしのサイト　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産レジデンシャルの<br>住まいと暮らしのサイト
+                        </span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner01">
+                            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner01">
+                        <li><a href="https://www.mfr.co.jp/saisei/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_tatekae.png"
+                                    alt="三井不動産レジデンシャル マンション再生"></a></li>
+                        <li><a href="https://www.mfr.co.jp/youchi/" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_tochikatuyou.png"
+                                    alt="三井不動産レジデンシャル 土地活用"></a></li>
+                        <li><a href="https://www.31-rm.com/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_residentialmade.jpg"
+                                    alt="三井不動産レジデンシャル レジデンシャルメイド"></a></li>
+                    </ul>
+                    <!--三井不動産グループ各社のサイト紹介　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産グループ各社のサイト紹介</span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner02"> <i class="fa fa-plus-square-o"
+                                aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner02">
+                        <li><a href="https://www.mitsukete.mitsui-mall.com/?utm_medium=referral&utm_source=owned&utm_campaign=mfg-banner&utm_term=mf&utm_content=31sumai&utm_id=1&_fsi=pMTcAvHi" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mitsukete.jpg"
+                                    alt="すまいとくらし　三井でみつけて"></a></li>
+                        <li><a href="http://31loop.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mitsui_loop.jpg" alt="三井のすまい LOOP"></a>
+                        </li>
+                        <li><a href="http://www.rehouse.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_rehouse.png"
+                                    alt="三井のリハウス"></a>
+                        </li>
+                        <li><a href="http://mfhl.mitsui-chintai.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residentiallease.png"
+                                    alt="三井不動産レジデンシャルリース"></a></li>
+                        <li><a href="http://www.mitsuihome.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mitsuihome.png" alt="三井ホーム"></a>
+                        </li>
+                        <li><a href="http://www.mitsui-reform.com/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_reform.png"
+                                    alt="三井のリフォーム"></a>
+                        </li>
+                        <li><a href="http://www.mitsui-kanri.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residential.png"
+                                    alt="三井不動産レジデンシャルサービス株式会社"></a></li>
+                        <li><a href="http://www.mitsui-chintai.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residentfirst.png"
+                                    alt="三井不動産グループ RESIDENT FIRST"></a></li>
+                        <li><a href="https://www.mfrw.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mitsui_residentialwellness.png"
+                                    alt="三井不動産レジデンシャルウェルネス"></a></li>
+                        <li><a href="https://www.mitsui-designtec.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mdt.png" alt="三井デザインテック"></a></li>
+                        <li><a href="https://www.slc-mh.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_slc-mh.png" alt="サンライフ・クリエイション"></a>
+                        </li>
+                    </ul>
+                    <!--三井不動産グループの商業施設・ホテルリゾートのサイト紹介　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産グループの商業施設・ホテルリゾートの紹介</span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner03"> <i class="fa fa-plus-square-o"
+                                aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner03">
+                        <li><a href="https://mitsui-shopping-park.com/lalaport/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_ららぽーとバナー_244_80.png"
+                                    alt="三井ショッピングパーク ららぽーと"></a>
+                        </li>
+                        <li><a href="https://mitsui-shopping-park.com/mop/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_MOPバナー.png" alt="三井アウトレットパーク"></a>
+                        </li>
+                        <li><a href="https://mitsui-shopping-park.com/urban/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_urban.png" alt="三井ショッピングパークアーバン"></a>
+                        </li>
+                        <li><a href="http://www.tobahotel.co.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_鳥羽バナーPNG.png" alt="鳥羽国際ホテル"></a>
+                        </li>
+                        <li><a href="https://www.celestinehotels.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_celestine.png" alt="ザ セレスティンホテルズ"></a>
+                        </li>
+                        <li><a href="https://www.gardenhotels.co.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mgh.png" alt="三井ガーデンホテル"></a></li>
+                        <li><a href="https://www.sequencehotels.com/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_sequence.png" alt="sequence"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="footer_inner" class="cf">
+                <div>
+                    <div class="footer_logo onlysp">
+                        <a href="https://www.31sumai.com/"><img
+                                src="/apps/settings/wcm/designs/31sumai/common/img/logo_header01.png" alt="三井のすまい"></a>
+                    </div>
+                    <ul id="footer_nav03" class="cf">
+                        <li><a href="https://www.31sumai.com/sitemap/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>サイトマップ
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/about/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>ご利用上の注意
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/thing/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>物件情報について
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/privacy/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>個人情報保護方針
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/privacy/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>個人情報のお取り扱いについて
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/specific/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>特定個人情報基本方針
+                            </a></li>
+                        <li><a href="https://www.mfr.co.jp/policy/social/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>ソーシャルメディアガイドライン
+                            </a></li>
+                        <li><a href="https://www.mfr.co.jp/terms/cookie_accesslog"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>Cookieおよびアクセスログについて
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/help/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>サイトの使い方
+                            </a></li>
+                    </ul>
+                </div>
+                <div id="copyright">
+                    <div class="btn_pagetop cf">
+                        <a href="#"> <i class="fa fa-caret-up"></i>
+                        </a>
+                    </div>
+                    <a href="http://www.mfr.co.jp/" target="_blank"><img
+                            src="/apps/settings/wcm/designs/31sumai/common/img/logo_header02.svg"
+                            alt="三井不動産レジデンシャル"></a>
+                    <small>Copyright
+                        &copy; Mitsui Fudosan Residential Co.,Ltd. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="js-migrationInformation">
+        <div>
+            <dl>
+                <dd>
+                    <dl>
+                        <dt class="b-date">2024.00.00</dt>
+                        <dd class="b-txt"><a href="https://www.31sumai.com/attend/X000/">物件エントリー受付中！※資料のご用意はございません。メールで随時情報をお届けいたします。</a>
+                        </dd>
+                    </dl>
+                </dd>
+            </dl>
+        </div>
+    
+    </div>
+
 </body>
+
 </html>

@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* ============================================================ */
+/* global_nav */
+/* ============================================================ */
+nav#global_nav {
+	border-top: 4px solid #e8e9f2;
+	border-bottom: 4px solid #e8e9f2;
+}
+
+nav#global_nav ul {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+nav#global_nav ul li {
+	float: left;
+	margin: 0 0 0 8px;
+}
+
+nav#global_nav ul li#gnav_area {
+	margin: 0;
+}
+
+nav#global_nav ul li a {
+	display: block;
+	width: 160px;
+	height: 62px;
+	line-height: 62px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.4rem;
+	text-align: center;
+	color: #000;
+	letter-spacing: 0.05em;
+	position: relative;
+}
+nav#global_nav ul li a:before{
+	display: block;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 6px 6px 6px;
+	border-color: transparent transparent #222b81 transparent;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -6px;
+}
+nav#global_nav ul li a:after{
+	display: block;
+	content: "";
+	background-color: #222c81;
+	height: 4px;
+	position: absolute;
+	bottom: -4px;
+	width: 100%;
+}
+nav#global_nav ul li a:hover:before,
+nav#global_nav ul li a:hover:after,
+nav#global_nav ul li.current a:before,
+nav#global_nav ul li.current a:after{
+	opacity: 1;
+}
+
+nav#global_nav ul li a:before,
+nav#global_nav ul li a:after{
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+	opacity: 0;
+}
+
+nav#global_nav ul li a i{
+	display: none;
+}
+
+/* ============================================================ */
+/* smartphone */
+/* ============================================================ */
+
+@media screen and (max-width:640px) {
+	nav#global_nav{
+		display: none;
+		border-top: 0;
+    border-bottom: 0;
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		background-color: rgba( 0, 0, 0, 0.75 );
+		z-index: 999;
+	}
+	nav#global_nav .gnavi_bt,
+	nav#global_nav ul{
+		margin: 0 0 0 auto;
+		width: 90%;
+		background-color: #fff;
+	}
+	nav#global_nav .gnavi_bt{
+		overflow: hidden;
+	}
+	nav#global_nav .gnavi_bt a{
+		width: 55px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: #f6f6f6;
+		float: right;
+	}
+	nav#global_nav .gnavi_bt a i{
+		font-size: 18px;
+	}
+	nav#global_nav ul{
+		border-top: 1px solid #dadada;
+		clear: both;
+		overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+	}
+	nav#global_nav ul li{
+		float: none;
+		margin: 0
+	}
+	nav#global_nav ul li a{
+		border-bottom: 1px solid #dadada;
+	}
+	nav#global_nav ul li a{
+		width: auto;
+		height: auto;
+		padding: 15px 15px;
+		text-align: left;
+		line-height: 1.8;
+	}
+	nav#global_nav ul li a:before,
+	nav#global_nav ul li a:after{
+		display: none;
+	}
+	nav#global_nav ul li a i{
+		display: inline-block;
+		margin-right: 0.5rem;
+	}
+}

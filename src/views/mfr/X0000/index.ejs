@@ -1,0 +1,12 @@
+<%
+const conf = {
+    title : 'top',
+    description : 'This is top page',
+    style: `${dir}/css/index.css`,
+    script: `${dir}/js/index.js`,
+    metaImage: 'https://dummyimage.com/600x400/333/ddd.png&text=Dummy+image'
+};
+%>
+<%- include('../../common/_head.ejs', { conf }) %>
+<%- dir %>
+<%- include('../../common/_foot.ejs', { conf }) %>

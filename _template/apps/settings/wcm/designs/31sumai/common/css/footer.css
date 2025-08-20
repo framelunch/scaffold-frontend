@@ -1,0 +1,537 @@
+@charset "utf-8";
+
+
+/* ============================================================ */
+/* 31footer recommend area */
+/* ============================================================ */
+/*----- .recommend_set -----*/
+.recommend_set{
+	margin-top: 60px;
+	padding-top: 60px;
+	border-top: 1px solid #cdcdcd;
+}
+.recommend_set>section{
+	margin-bottom: 60px;
+}
+
+.recommend_set>.branchs .c-column li:nth-child(3n){
+	margin-right: 0;
+	margin-bottom: 8px;
+}
+/* ============================================================ */
+/* footer */
+/* ============================================================ */
+article+footer {
+	margin-top: 60px;
+}
+footer {
+	background: #f6f6f6;
+}
+
+footer #footer_inner {
+	padding: 15px 0 50px;
+	border-top: 1px solid #b6b6b6;
+}
+
+
+/*----- #footer_bnr -----*/
+
+footer #footer_bnr {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 60px 0 30px 0;
+}
+footer #footer_bnr .ttl02 {
+}
+footer #footer_bnr .ttl02 br{
+	display: none;
+}
+footer #footer_bnr ul {
+	margin-bottom: 60px;
+}
+footer #footer_bnr ul li{
+	margin-bottom: 8px;
+}
+footer #footer_bnr ul li:nth-child(4n){
+	margin-right: 0;
+}
+
+
+/*----- .btn_pagetop -----*/
+
+footer .btn_pagetop {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: 460px;
+	z-index: 10;
+}
+
+footer .btn_pagetop a {
+	float: right;
+	display: table;
+	width: 40px;
+	height: 40px;
+	background: #707070;
+	text-decoration: none;
+}
+
+footer .btn_pagetop a.float {
+	position: fixed;
+	bottom: 20px;
+	right: 50%;
+	margin-right: -640px;
+	z-index: 1000;
+}
+
+footer .btn_pagetop .fa-caret-up {
+	display: table-cell;
+	color: #fff;
+	vertical-align: middle;
+	text-align: center;
+}
+
+footer .btn_pagetop a:hover {
+	filter: alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+
+footer nav a{
+	text-decoration: none;
+}
+/*----- #footer_nav01 -----*/
+
+footer #footer_nav01 {
+	display: table;
+	width: 1000px;
+	margin: 30px auto;
+	padding: 20px 0;
+	font-size: 15px;
+	font-size: 1.5rem;
+}
+
+footer #footer_nav01>li{
+	display: table-cell;
+	vertical-align: top;
+	text-align: left;
+	width: 25%;
+}
+
+footer #footer_nav01>li>a {
+	text-decoration: none;
+}
+
+footer #footer_nav01>li>a:hover {
+	text-decoration: underline;
+}
+footer #footer_nav01>li>dl dt {
+	margin-left: 0;
+}
+footer #footer_nav01>li>dl dd li {
+	position: relative;
+	font-size: 1.2rem;
+	padding: 0px 10px 5px 15px;
+}
+footer #footer_nav01>li>dl dd li i:first-child {
+	position: absolute;
+	top: 0.3em;
+	left: 0px;
+	margin-left: 0.5em;
+}
+footer #footer_nav01>li>dl dd li i.fa-external-link{
+	margin-left: 0.5em;
+}
+
+
+/*----- #footer_nav02 -----*/
+
+footer #footer_nav02 {
+	margin: 30px 0;
+	font-size: 11px;
+	font-size: 1.1rem;
+	text-align: center;
+}
+
+footer #footer_nav02 li {
+	display: inline;
+	padding: 0 10px;
+	border-left: 1px solid #000;
+}
+
+footer #footer_nav02 li:first-child {
+	border-left: none;
+}
+
+footer #footer_nav02 li i,
+footer #footer_nav03 li i{
+	display: none;
+}
+
+/*----- #footer_nav03 -----*/
+
+footer #footer_nav03 {
+	margin: 30px auto;
+	font-size: 11px;
+	font-size: 1.1rem;
+	text-align: center;
+	width: 1000px;
+}
+
+footer #footer_nav03 li {
+	display: inline;
+	padding: 0 8px;
+	border-left: 1px solid #000;
+}
+
+footer #footer_nav03 li:first-child {
+	border-left: none;
+}
+
+
+/*----- #copyright -----*/
+
+footer #copyright {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+footer #copyright > a {
+	margin: 0 20px 0 0;
+}
+
+footer #copyright img {
+	vertical-align: top;
+	width: 160px;
+	height: auto;
+}
+
+footer div#copyright small {
+	font-size: 10px;
+	font-size: 1.0rem;
+}
+
+footer div#copyright:first-child{
+	margin-top:30px
+}
+
+/* ============================================================ */
+/* footer (会員系、資料請求、来場予約、標準1カラムフッタ) */
+/* ============================================================ */
+footer.footer_personal{
+	margin-top: 30px;
+}
+footer.footer_personal #copyright{
+	text-align: center
+}
+footer.footer_personal #footer_inner{
+	border-top: 0;
+}
+footer.footer_personal div#copyright img{
+	height: 36px;
+	width: auto;
+	margin-bottom: 10px;
+}
+footer.footer_personal div#copyright small{
+	display: block;
+}
+
+/* ============================================================ */
+/* smartphone */
+/* ============================================================ */
+
+@media screen and (max-width:640px) {
+	.recommend_set{
+		margin-top: 30px;
+    padding-top: 30px;
+    border-top: 0;
+		background-color: #f6f6f6;
+	}
+	.recommend_set .slider .btn_prev,
+	.recommend_set .slider .btn_next{
+		background: rgba(246,246,246,0.5);
+	}
+	.recommend_set>section {
+    margin-bottom: 30px;
+	}
+	.recommend_set>.recommend_report .slider_wrapper .c-column>li:nth-of-type(n+3){
+		display: none;
+	}
+	.recommend_set>.recommend_report .c-wide_btn{
+		margin-top: 0;
+	}
+	.recommend_set>.branchs .inner{
+		margin: 0;
+	}
+	.recommend_set>.branchs .c-column{
+		border-top: 1px solid #cdcdcd;
+	}
+	.recommend_set>.branchs .c-column li{
+		float: left;
+		width: 50%;
+		margin: 0;
+		border-right: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 0;
+		box-sizing: border-box;
+		clear: none;
+	}
+	.recommend_set>.branchs .c-column li:nth-child(3n){
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	.recommend_set>.branchs .c-column li:nth-child(2n){
+		border-right: 1px solid transparent;
+	}
+	.recommend_set>.branchs .c-column li:nth-child(2n+1){
+		clear: both;
+	}
+	.recommend_set>.branchs .c-column li img{
+		display: none;
+	}
+	.recommend_set>.branchs .c-column li .c-txt{
+		position: relative;
+		padding: 0;
+		background-color: transparent;
+	}
+	.recommend_set>.branchs .c-column li a .c-txt .c-ttl{
+		font-size: 1.2rem;
+		line-height: 1;
+		margin: 0;
+		text-decoration: none;
+		padding: 1.7rem 30px 1.7rem 10px;
+		position: relative;
+	}
+	.recommend_set>.branchs .c-column li a .c-txt .c-ttl:before{
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		padding-right: 0;
+		margin-top: -0.5em;
+	}
+	.recommend_set>.branchs .c-column li .c-txt .c-description{
+		display: none;
+	}
+	.recommend_set>.recommend{
+		margin-bottom: 0;
+		padding-bottom: 30px;
+	}
+	footer #footer_bnr{
+		width: auto;
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
+	footer #footer_bnr .ttl02{
+		margin: 0;
+		padding: 0;
+		border-left: 0;
+		font-size: 1.2rem;
+		border-bottom: 1px solid #cdcdcd;
+		display: table;
+		width: 100%;
+		height: 46px;
+		line-height: 1.5;
+	}
+	footer #footer_bnr .ttl02:first-child{
+		border-top: 1px solid #cdcdcd;
+	}
+	footer #footer_bnr .ttl02 br{
+		display: inline;
+	}
+	footer #footer_bnr .ttl02>span,
+	footer #footer_bnr .ttl02>a{
+		display: table-cell;
+		vertical-align: middle;
+
+	}
+	footer #footer_bnr .ttl02>span{
+		padding: 0 10px;
+	}
+	footer #footer_bnr .ttl02>a{
+		text-align: center;
+		height: 44px;
+		width: 44px;
+		right: 0;
+		color: #212e7d;
+	}
+	footer #footer_bnr ul{
+		margin: 0;
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 10px;
+	}
+	footer #footer_bnr ul li{
+		width: 50%;
+		float: left;
+		margin: 0;
+		padding: 10px 5px 0 5px;
+		box-sizing: border-box;
+	}
+	footer #footer_inner{
+		border-top: 0;
+		padding: 0;
+		background: #fff;
+	}
+	footer #footer_inner .footer_logo{
+		padding-top: 30px;
+		padding-bottom: 10px;
+		text-align: center;
+	}
+	footer #footer_inner .footer_logo img{
+		width: auto;
+		height: auto;
+		max-height: 30px;
+	}
+	footer #footer_inner #footer_nav01{
+		display: block;
+		width: auto;
+		padding: 0;
+		margin: 0;
+		border-top: 1px solid #cdcdcd;
+	}
+	footer #footer_inner #footer_nav01>li{
+		float: none;
+		width: 100%;
+		display: block;
+	}
+	footer #footer_inner #footer_nav01 .ttl02{
+		margin: 0;
+		padding: 0;
+		border-left: 0;
+		border-bottom: 1px solid #cdcdcd;
+		display: table;
+		width: 100%;
+		height: 46px;
+		line-height: 1.5;
+		font-size: 1.4rem;
+	}
+	footer #footer_inner #footer_nav01 .ttl02>span,
+	footer #footer_inner #footer_nav01 .ttl02>a{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	footer #footer_inner #footer_nav01 .ttl02>span{
+		padding: 0 10px;
+	}
+	footer #footer_inner #footer_nav01 .ttl02>a{
+		text-align: center;
+		height: 44px;
+		width: 44px;
+		right: 0;
+		color: #212e7d;
+	}
+	footer #footer_inner #footer_nav01>li>dl>dd>ul>li{
+		font-size: 1.2rem;
+		line-height: 1.5;
+		margin: 0;
+		text-decoration: none;
+		padding: 0;
+		position: relative;
+		border-bottom: 1px solid #cdcdcd;
+	}
+	footer #footer_inner #footer_nav01>li>dl>dd>ul>li a{
+		text-decoration: none;
+		padding: 1.2rem 30px 1.2rem 10px;
+		display: block;
+	}
+	footer #footer_inner #footer_nav01>li>dl>dd>ul>li i:first-child{
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		left: auto;
+		padding-right: 0;
+		margin-top: -0.5em;
+	}
+	footer #footer_nav03{
+		border-top: 1px solid #cdcdcd;
+		width:auto;
+	}
+	footer #footer_nav01+#footer_nav03{
+		border-top: 0;
+	}
+	footer #footer_nav02{
+		border-top: 1px solid #cdcdcd;
+	}
+	footer #footer_nav02,
+	footer #footer_nav03{
+		margin: 0;
+	}
+	footer #footer_nav02 li,
+	footer #footer_nav03 li{
+		border-left: 0;
+		display: table;
+		float: left;
+		width: 50%;
+		height: 44px;
+		margin: 0;
+		border-right: 1px solid #cdcdcd;
+		border-bottom: 1px solid #cdcdcd;
+		padding: 0;
+		box-sizing: border-box;
+		clear: none;
+	}
+	footer #footer_nav02 li a,
+	footer #footer_nav03 li a{
+		text-align: left;
+		display: table-cell;
+		vertical-align: middle;
+		position: relative;
+
+		font-size: 1.1rem;
+		line-height: 1.5;
+		margin: 0;
+		text-decoration: none;
+		padding: 0 30px 0 10px;
+		position: relative;
+	}
+	footer #footer_nav02 li a i,
+	footer #footer_nav03 li a i{
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		left: auto;
+		padding-right: 0;
+		margin-top: -0.5em;
+	}
+	footer #copyright{
+		width: auto;
+		margin: 0 auto;
+		text-align: center;
+		padding: 30px 0 0 0;
+	}
+	footer #copyright > a {
+		margin: 0;
+	}
+	footer #copyright img {
+		width: 120px;
+		height: auto;
+	}
+	footer div#copyright small{
+		padding: 10px 0 30px 0;
+		font-size: 0.9rem;
+		display: block;
+	}
+	footer .btn_pagetop{
+		display: none;
+	}
+
+	/* ============================================================ */
+	/* footer (会員系、資料請求、来場予約、標準1カラムフッタ) */
+	/* ============================================================ */
+	footer.footer_personal #footer_inner{
+		background: #f6f6f6;
+	}
+	footer.footer_personal #copyright{
+		text-align: center
+	}
+	footer.footer_personal #copyright > a{
+		margin: 0 auto;
+	}
+	footer.footer_personal #footer_inner{
+		margin: 10px 0 0 0;
+	}
+	footer.footer_personal div#copyright small{
+		padding-top: 0;
+	}
+}

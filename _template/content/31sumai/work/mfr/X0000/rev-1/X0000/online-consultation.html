@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- 固定読み込みCSSファイル -->
+    <link rel="stylesheet" href="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/css/style.css" charset="utf-8">
+    <!-- ********** AEM dialog input start ********** -->
+    <meta charset="utf-8">
+
+    <!-- *************************************** 編集可能領域 head start *************************************** -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- レスポンシブサイトの場合は下記を有効化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- レスポンシブサイトではない場合は下記を有効化 -->
+    <!-- <meta name="viewport" content="width=1000" /> -->
+    <meta name="keywords" content="{物件名},{市区町村名},{沿線名},{駅名},新築マンション,分譲マンション,三井の住まい,31sumai.com,三井不動産レジデンシャル">
+    <meta name="description"
+        content="{物件名}は{市区町村名}に⽴地する三井不動産レジデンシャルの新築・分譲マンションです。三井の住まい(31sumai.com)は、新築マンション・分譲マンションの住まい情報総合サイトです。">
+    <title>オンライン商談｜{物件名}｜三井不動産レジデンシャル：三井の住まい｜{市区町村名}の新築・分譲マンション</title>
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <link rel="canonical" href="https://www.31sumai.com/mfr/online-consultation.html">
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/components.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/theme.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/online-consultation.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bukken-header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bukken-footer.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/libs/font-awesome.min.css" media="all" />
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/jquery-3.1.1.min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/bootstrap.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/common.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/base.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/underscore-min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/jquery.colorbox-min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/bukken-header.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/plan_search.js"></script>
+    <!-- /*************************************** 編集可能領域 head end *************************************** -->
+    <script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?~lNOE73dL9E%3D&fadein=10" charset="utf-8"></script>
+    <!-- /********** AEM dialog input end ********** -->
+    <!-- 固定読み込みJSファイル -->
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/jQuery-bukkenMigration.js" charset="utf-8"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/script.js" charset="utf-8"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/base.js"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/carousel.js"></script>
+
+    <script type="text/javascript">
+        var bukken_obj = {
+            "id": "",
+            "name": "",
+            "pageURL": "/mfr/",
+            "thumbnailURL": "",
+            "message": "",
+            "categoryId": "",
+            "areaCode": "",
+            "buildingType": "",
+            "units": "",
+            "moveln": "",
+            "bisType": "",
+            "brandLogoId": "",
+            "JVCode": "",
+            "divType": "",
+            "allianceFlg": "",
+            "address": "",
+            "traffic": "",
+            "devEnvFlg": "",
+            "status": "",
+            "dataType": "bukken"
+        }
+    </script>
+    <script src="//assets.adobedtm.com/05c035d020eb682193974a42b73368b2a72c73a8/satelliteLib-dfb4eaa18c8943b69a02d7895d1fd500140ffb51.js"></script>
+</head>
+
+<body>
+    <div class="section"></div>
+    <div class="iparys_inherited"></div>
+    <article id="" class="">
+        <!-- ********** AEM dialog input start ********** -->
+
+        <!-- *************************************** 編集可能領域 body(メインコンテンツ) start *************************************** -->
+        <div id="wrap_width">
+            <!-- コーディングサンプル body(ヘッダ) start-->
+            <div id="pagetop">
+                <section class="header-01-wrap">
+                    <div class="header-02">
+                        <div id="heder_nav">
+                            <div class="gnavi_bt">
+                                <a href="#" class="js-gnavi_open"> <i class="fa fa-bars" aria-hidden="true"></i><span
+                                        class="onlypc">総合</span>MENU</a>
+                            </div>
+                        </div>
+                        <nav id="global_nav" class="js-gnavi_content">
+                            <div class="gnavi_bt">
+                                <a href="#" class="js-gnavi_close"> <i class="fa fa-times" aria-hidden="true"></i></a>
+                            </div>
+                            <ul class="cf js-gnavi_scroll" id="global_nav_list">
+                                <li id="gnav_title" class="default-ls"><a href="javascript:void(0)" class="no_link">
+                                        <span></span>お住まいをお探しの方へ</a></li>
+                                <li id="gnav_top" class="default-ls">
+                                    <a href="https://www.31sumai.com/" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>三井のすまいトップ
+                                    </a>
+                                </li>
+                                <li id="gnav_area" class="default-ls">
+                                    <a href="https://www.31sumai.com/#search_area" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>すまいを探す
+                                    </a>
+                                </li>
+                                <li id="gnav_brand" class="default-ls">
+                                    <a href="https://www.31sumai.com/brand/" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>ブランドを知る
+                                    </a>
+                                </li>
+                                <li id="gnav_kodawari" class="default-ls">
+                                    <a href="https://www.31sumai.com/quality/" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>三井のクオリティ
+                                    </a>
+                                </li>
+                                <li id="gnav_voice" class="default-ls">
+                                    <a href="https://www.31sumai.com/voice/" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>ご購入者の声
+                                    </a>
+                                </li>
+                                <li id="gnav_service" class="default-ls">
+                                    <a href="https://www.31sumai.com/service/" target="_blank">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>サービス
+                                    </a>
+                                </li>
+                                <li id="gnav_logo" class="default-ls"><a href="https://www.mfr.co.jp/"
+                                        target="_blank"><img
+                                            src="/apps/settings/wcm/designs/31sumai/mfr/common/images/mfr-logo.svg"
+                                            alt="三井不動産レジデンシャル"></a></li>
+                            </ul>
+                        </nav>
+                        <div class="header02-cont container">
+                            <div class="row">
+                                <div class="mfr-logo">
+                                    <a href="http://www.mfr.co.jp/" target="_blank"><img
+                                            src="/apps/settings/wcm/designs/31sumai/mfr/common/images/mfr-logo.svg"
+                                            alt="三井不動産レジデンシャル"></a>
+                                </div>
+                                <div class="logo-cont col-md-5 col-lg-6">
+                                    <a href="/content/31sumai/work/mfr/X0000/rev-1/X0000.html"><img
+                                            src="/content/dam/31sumai/mfr/X0000/common/images/header-02-001.gif"
+                                            alt="パークホームズ地名テールネーム" class="img-responsive"></a>
+                                    <div class="nav-sp navbar-header">
+                                        <button id="toggle-nav" type="button" class="navbar-toggle collapsed"
+                                            data-toggle="collapse" data-target="#gnavi-01" aria-expanded="false"
+                                            aria-controls="navbar">
+                                            <span class="nav-show glyphicon glyphicon-menu-hamburger"></span>
+                                            <span class="nav-close glyphicon glyphicon-remove"></span>
+                                            <span class="nav-label">メニュー</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="btn-cont col-md-7 col-lg-6">
+                                    <a href="/attend/X0000/" class="btn-link btn-md btn-primary" target="_blank"><span
+                                            class="icon glyphicon glyphicon-calendar icon-attend"
+                                            aria-hidden="true"><span class="path2"></span><span
+                                                class="path3"></span><span class="path4"></span></span>来場予約</a>
+
+                                    <a href="/entry/X0000/?ENT=0" class="btn-link btn-md btn-primary"
+                                        target="_blank"><span
+                                            class="icon icon-moon icon-pen icon-entry"></span>物件エントリー</a>
+
+                                    <a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/genchi.html"
+                                        class="js-annaizu_link btn-link btn-md btn-secondary" target="_blank"><span
+                                            class="icon glyphicon glyphicon-map-marker"
+                                            aria-hidden="true"></span>現地案内図</a>
+                                    <div class="b-annaizu_modal js-b-annaizu_modal">
+                                        <div class="box">
+                                            <div class="b-head">
+                                                <div class="b-logo"><img
+                                                        src="/content/dam/31sumai/mfr/X0000/common/images/header-02-001.gif"
+                                                        alt="パークホームズ地名テールネーム"></div>
+                                                <div class="b-print">
+                                                    <div class="b-btn"><a
+                                                            href="/content/dam/31sumai/mfr/X0000/pdf/X0000_genchi.pdf"
+                                                            target="_blank"><span>印刷用PDF</span></a></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="b-annnaizu">
+                                                <p class="b-ttl">現地案内図</p>
+                                                <img src="/content/dam/31sumai/mfr/X0000/annai/X0000001.gif">
+                                            </div>
+                                            <div class="b-annnaizu b-annnaizu-2">
+                                                <p class="b-ttl">レジデンシャルサロン案内図</p>
+                                                <img src="/content/dam/31sumai/mfr/X0000/annai/X0000002.gif">
+                                            </div>
+                                            <div class="b-annnaizu">
+                                            </div>
+                                            <div class="b-bukken_info">
+                                                <p class="b-name"><span>パークホームズ地名テールネーム</span>レジデンシャルサロン</p>
+                                                <!-- <p class="b-address">物件・販売センター住所</p> -->
+                                                <div class="box">
+                                                    <p class="b-tel"><a href="tel:0120-321-820">0120-321-820</a></p>
+                                                    <div class="b-sales_info">
+                                                        <dl class="business_hour">
+                                                            <dt>営業時間</dt>
+                                                            <dd>平日：11:00~17:00</dd>
+                                                            <dd>土日祝：10:00～17:00</dd>
+                                                        </dl>
+                                                        <dl class="regular_holiday">
+                                                            <dt>定休日</dt>
+                                                            <dd>火・水・木定休</dd>
+                                                        </dl>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="b-close_gmap">
+                                                <div class="b-btn"><a href="https://www.google.co.jp/maps/@【緯度】,【経度】"
+                                                        target="_blank"><span>Googleマップで開く</span></a></div>
+                                                <div class="b-btn"><a href="javascript:void(0)"
+                                                        onclick="$.colorbox.close(); return false;"><span>閉じる</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="b-foot">
+                                            <p class="b-copy">Copyright &copy; Mitsui Fudosan Residential Co.,Ltd. All
+                                                Rights Reserved.</p>
+                                            <p class="b-company"><img
+                                                    src="/content/dam/31sumai/mfr/X0000/common/images/mfr_logo.svg"
+                                                    alt="三井不動産レジデンシャル"></p>
+                                        </div>
+                                    </div>
+                                    <a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/outline.html" target="_blank"
+                                        onclick="javascript:window.open(this.getAttribute('href'),'','location=no,menubar=no,scrollbars=yes,resizable=yes');return false;"
+                                        class="btn-link btn-md btn-secondary"><span
+                                            class="icon icon-moon icon-office"></span>物件概要</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gnavi-01 navbar-collapse collapse" id="gnavi-01">
+                        <ul class="nav length9">
+                            <li class="active"><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000.html">トップ</a></li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/consept.html">コンセプト</a></li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/location.html">周辺環境</a></li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/design.html">建物デザイン</a></li>
+                            <li class="active"><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/madori.html">間取り</a>
+                            </li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/modelroom.html">モデルルーム</a></li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/equipment.html">設備仕様</a></li>
+                            <li class="active"><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/brand.html">ブランド</a>
+                            </li>
+                            <li class="active"><a
+                                    href="/content/31sumai/work/mfr/X0000/rev-1/X0000/access.html">交通アクセス</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!-- /コーディングサンプル body(ヘッダ) end -->
+
+            <!-- オンライン商談Contents領域 -->
+            <article id="contents" class="contents">
+                <div class="online_index">
+                    <h1 id="visual">
+                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/visual_index01.png" alt="ONLINE">
+                    </h1>
+                    <h2 class="online_main_title">オンライン相談サービス</h2>
+                    <div class="inner">
+                        <h2 class="online_sub_title">ご自宅にいながら、<span class="txt-block">すまいとくらいについて</span><span
+                                class="txt-block">ご相談いただけます。</span></h2>
+                        <p>三井不動産レジデンシャルでは、オンライン相談を導入しております。<br
+                                class="pc-visible">ご来場いただくことが難しいお客様に、物件に関する様々な資料をお見せしながら、わかりやすくご説明いたします。</p>
+                        <!-- 各物件のオンライン商談予約フォームURLを設定 -->
+                        <div class="online_btn">
+                            <a href="">オンライン商談のご予約はこちら</a>
+                        </div>
+                        <!-- /各物件のオンライン商談予約フォームURLを設定 -->
+                        <section>
+                            <h3 id="online" class="ttl01">オンライン相談とは</h3>
+                            <p class="online_copy">遠方にお住まいの方やご都合の合わない方、長時間の外出が難しい方などに、<br
+                                    class="pc-visible">ご来場いただくことなくオンライン上で物件を紹介させていただくサービスです。<br
+                                    class="pc-visible">営業担当が同じ画面を見ながらご説明いたしますので、会話だけでは伝わらない情報も分かりやすくお伝えする事ができます。</p>
+                            <ul class="online_point clearfix">
+                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index01.svg"
+                                        alt=""></li>
+                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index02.svg"
+                                        alt=""></li>
+                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index03.svg"
+                                        alt=""></li>
+                            </ul>
+                            <h3 id="online_setup" class="ttl01">事前セットアップ</h3>
+                            <div class="online_pic01">
+                                <div class="online_pic01_inner">
+                                    <ul class="clearfix">
+                                        <li>
+                                            <h4>■PCをお使いの場合</h4>
+                                            <ul class="clearfix">
+                                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index04_1.svg"
+                                                        alt=""></li>
+                                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index04_2.svg"
+                                                        alt=""></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <h4>■スマートフォンをお使いの場合</h4>
+                                            <ul class="clearfix">
+                                                <li class="dummy_box">&emsp;</li>
+                                                <li><img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index04_1.svg"
+                                                        alt=""></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p>三井不動産レジデンシャルでは、オンライン商談には「Zoom社」のサービスを使用しております。<br><a
+                                            href="https://www.31sumai.com/service/online-consultation/zoom-setup/"
+                                            target="_blank">詳しいセットアップ方法についてはこちらをご覧ください。</a></p>
+                                </div>
+                            </div>
+                            <h3 class="online_pic02_t">■ご紹介画面例</h3>
+                            <ul class="online_pic02 clearfix">
+                                <li>
+                                    <img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index05.png"
+                                        alt="">
+                                    <p>間取り図のご紹介</p>
+                                </li>
+                                <li>
+                                    <img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index06.png"
+                                        alt="">
+                                    <p>現地からの眺望のご紹介</p>
+                                </li>
+                                <li>
+                                    <img src="/content/dam/31sumai/mfr/X0000/online-consultation/pic_index07.png"
+                                        alt="">
+                                    <p>実際のお部屋やモデルルームのご紹介</p>
+                                </li>
+                            </ul>
+                            <p class="online_pic02_cap">※上記の画面は一例です。ご紹介させていただく内容は、物件により異なります。</p>
+                            <h3 id="use" class="ttl01">ご利用の流れ</h3>
+
+                            <div class="online_use online_step1">
+                                <dl class="clearfix">
+                                    <dt>
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index01.svg"
+                                            alt="" class="pc-visible">
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index01_sp.svg"
+                                            alt="" class="sp-visible">
+                                    </dt>
+                                    <dd>
+                                        <h2 class="online_use_t">オンライン相談のお申し込み</h2>
+                                        <p>オンライン相談のお申し込み方法は、各物件ホームページや物件からのお知らせメールに記載の内容をご確認ください。<br>
+                                            <span class="small">※物件個別の営業日については、各物件ホームページをご確認ください。</span>
+                                        </p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="online_use online_step2">
+                                <dl class="clearfix">
+                                    <dt>
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index02.svg"
+                                            alt="" class="pc-visible">
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index02_sp.svg"
+                                            alt="" class="sp-visible">
+                                    </dt>
+                                    <dd>
+                                        <h2 class="online_use_t">アプリ・プログラムのインストール</h2>
+                                        <p>Zoomでウェビナー・オンライン相談に参加するために必要なセットアップをお願いします。<br>詳しくは<a
+                                                href="https://www.31sumai.com/service/online-consultation/zoom-setup/"
+                                                target="_blank">こちら</a></p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="online_use online_step3">
+                                <dl class="clearfix">
+                                    <dt>
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index03.svg"
+                                            alt="" class="pc-visible">
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index03_sp.svg"
+                                            alt="" class="sp-visible">
+                                    </dt>
+                                    <dd>
+                                        <h2 class="online_use_t">オンライン相談参加用URLを受け取る</h2>
+                                        <p>営業担当より、オンライン相談ご予約日・オンライン相談参加用URLのご案内を差し上げます。</p>
+                                    </dd>
+                                </dl>
+                            </div>
+
+                            <div class="online_use online_step4">
+                                <dl class="clearfix">
+                                    <dt>
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index04.svg"
+                                            alt="" class="pc-visible">
+                                        <img src="/content/dam/31sumai/mfr/X0000/online-consultation/t_index04_sp.svg"
+                                            alt="" class="sp-visible">
+                                    </dt>
+                                    <dd>
+                                        <h2 class="online_use_t">オンライン相談スタート</h2>
+                                        <p>オンライン相談当日になったら参加用URLにアクセスし、<br
+                                                class="pc-visible">Zoomによるオンラインミーティングを開始してください。</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="online_cap">
+                                <p>※オンライン相談はWi-Fi環境でのご利用を推奨しています。なお、通信にかかる費用については、お客様のご負担となります。<br>※お客さまがご利用のインターネットの回線速度やセキュリティなどの影響で本サービスをご利用いただけない場合がございます。
+                                </p>
+                            </div>
+                            <!-- 各物件のオンライン商談予約フォームURLを設定 -->
+                            <div class="online_btn">
+                                <a href="">オンライン商談のご予約はこちら</a>
+                            </div>
+                            <!-- /各物件のオンライン商談予約フォームURLを設定 -->
+                        </section>
+                    </div>
+                </div>
+
+            </article>
+            <!-- /オンライン商談Contents領域 -->
+
+            <!-- コーディングサンプル body(フッタ) start -->
+            <aside class="bukken_footer">
+                <div class="footer-nav-01">
+                    <div class="container clearfix">
+                        <div class="tel-cont">
+                            <h3>お問い合わせ</h3>
+                            <h5>Contact</h5>
+                            <p class="sub-text">「パークホームズ地名テールネーム」レジデンシャルサロン</p>
+                            <ul class="tel-details sp-pt5 clearfix">
+                                <li class="img"><img src="/content/dam/31sumai/mfr/X0000/common/images/icon_freedial.svg"
+                                        alt="フリーダイヤル">
+                                </li>
+                                <li class="phone"><a href="tel:0120-321-459" class="pc-no-action">0120-321-459</a></li>
+                            </ul>
+                            <div class="text">
+                                <dl class="business_hour">
+                                    <dt>営業時間／</dt>
+                                    <dd>平日：11:00~17:00</dd>
+                                    <dd>土日祝：10:00~17:00</dd>
+                                </dl>
+                                <dl class="regular_holiday">
+                                    <dt>定休日／</dt>
+                                    <dd>火・水・木定休</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="btn-cont">
+                            <a href="/attend/X0000/" class="btn-link btn-md btn-primary" target="_blank"><span
+                                    class="icon glyphicon glyphicon-calendar icon-attend" aria-hidden="true"><span
+                                        class="path2"></span><span class="path3"></span><span class="path4"></span></span>来場予約</a>
+                            <a href="/entry/X0000/?ENT=0" class="btn-link btn-md btn-primary" target="_blank"><span
+                                    class="icon icon-moon icon-pen icon-entry"></span>物件エントリー</a>
+                            <a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/genchi.html"
+                                class="js-annaizu_link btn-link btn-md btn-secondary" target="_blank"><span
+                                    class="icon glyphicon glyphicon-map-marker" aria-hidden="true"></span>現地案内図</a>
+                            <a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/outline.html" target="_blank"
+                                onclick="javascript:window.open(this.getAttribute('href'),'','location=no,menubar=no,scrollbars=yes,resizable=yes');return false;"
+                                class="btn-link btn-md btn-secondary"><span class="icon icon-moon icon-office"></span>物件概要</a>
+                        </div>
+                    </div>
+                </div>
+            
+                <ul class="footer-gnavi">
+                    <li class="current"><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000.html">トップ</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/consept.html">コンセプト</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/location.html">周辺環境</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/design.html">建物デザイン</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/madori.html">間取り</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/modelroom.html">モデルルーム</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/equipment.html">設備仕様</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/brand.html">ブランド</a></li>
+                    <li class=""><a href="/content/31sumai/work/mfr/X0000/rev-1/X0000/access.html">交通アクセス</a></li>
+                </ul>
+            </aside>
+            <!-- /コーディングサンプル body(フッタ) end -->
+        </div>
+
+        <!-- /*************************************** 編集可能領域 body(メインコンテンツ) end *************************************** -->
+        <!-- /********** AEM dialog input end ********** -->
+    </article>
+
+    <div id="bukken_migration_footer">
+        <aside class="recommend_set">
+            <section class="slider history">
+                <h1 class="ttl01">これまでに見た物件</h1>
+            </section>
+            <section class="slider recommend">
+                <h1 class="ttl01">あなたにおすすめの物件</h1>
+            </section>
+        </aside>
+        <footer>
+            <!--三井不動産レジデンシャルの住まいと暮らしのサイト、三井不動産グループ各社のサイト紹介のいずれかバナー設定あり -->
+
+            <div id="footer_bnr">
+                <div class="onlypc">
+                    <!--三井のすまいサイト　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産レジデンシャルの住まい情報総合サイト</span>
+                    </p>
+                    <ul class="c-column c-column04 cf">
+                        <li>
+                            <a href="https://www.31sumai.com/" target="_blank">
+                                <img src="/apps/settings/wcm/designs/31sumai/common/img/bnr_31sumai.png" alt="三井のすまい">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <!--三井不動産レジデンシャルの住まいと暮らしのサイト　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産レジデンシャルの<br>住まいと暮らしのサイト
+                        </span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner01">
+                            <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner01">
+                        <li><a href="https://www.mfr.co.jp/saisei/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_tatekae.png"
+                                    alt="三井不動産レジデンシャル マンション再生"></a></li>
+                        <li><a href="https://www.mfr.co.jp/youchi/" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_tochikatuyou.png"
+                                    alt="三井不動産レジデンシャル 土地活用"></a></li>
+                        <li><a href="https://www.31-rm.com/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_residentialmade.jpg"
+                                    alt="三井不動産レジデンシャル レジデンシャルメイド"></a></li>
+                    </ul>
+                    <!--三井不動産グループ各社のサイト紹介　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産グループ各社のサイト紹介</span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner02"> <i class="fa fa-plus-square-o"
+                                aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner02">
+                        <li><a href="https://www.mitsukete.mitsui-mall.com/?utm_medium=referral&utm_source=owned&utm_campaign=mfg-banner&utm_term=mf&utm_content=31sumai&utm_id=1&_fsi=pMTcAvHi" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mitsukete.jpg"
+                                    alt="すまいとくらし　三井でみつけて"></a></li>
+                        <li><a href="http://31loop.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mitsui_loop.jpg" alt="三井のすまい LOOP"></a>
+                        </li>
+                        <li><a href="http://www.rehouse.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_rehouse.png"
+                                    alt="三井のリハウス"></a>
+                        </li>
+                        <li><a href="http://mfhl.mitsui-chintai.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residentiallease.png"
+                                    alt="三井不動産レジデンシャルリース"></a></li>
+                        <li><a href="http://www.mitsuihome.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mitsuihome.png" alt="三井ホーム"></a>
+                        </li>
+                        <li><a href="http://www.mitsui-reform.com/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_reform.png"
+                                    alt="三井のリフォーム"></a>
+                        </li>
+                        <li><a href="http://www.mitsui-kanri.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residential.png"
+                                    alt="三井不動産レジデンシャルサービス株式会社"></a></li>
+                        <li><a href="http://www.mitsui-chintai.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/apps/settings/wcm/designs/31sumai/common/img/bnr_mitsui_residentfirst.png"
+                                    alt="三井不動産グループ RESIDENT FIRST"></a></li>
+                        <li><a href="https://www.mfrw.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mitsui_residentialwellness.png"
+                                    alt="三井不動産レジデンシャルウェルネス"></a></li>
+                        <li><a href="https://www.mitsui-designtec.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_mdt.png" alt="三井デザインテック"></a></li>
+                        <li><a href="https://www.slc-mh.co.jp/?rfrmtd=31sumai" target="_blank"><img
+                                    src="/content/dam/mfrcojp/etc/common/img/bnr_slc-mh.png" alt="サンライフ・クリエイション"></a>
+                        </li>
+                    </ul>
+                    <!--三井不動産グループの商業施設・ホテルリゾートのサイト紹介　バナー表示 -->
+                    <p class="ttl02">
+                        <span>三井不動産グループの商業施設・ホテルリゾートの紹介</span> <a href="#" class="onlysp js-footer_accordion_bt"
+                            data-footer_accordion_target="banner03"> <i class="fa fa-plus-square-o"
+                                aria-hidden="true"></i>
+                        </a>
+                    </p>
+                    <ul class="c-column c-column04 cf js-footer_accordion_content"
+                        data-footer_accordion_target="banner03">
+                        <li><a href="https://mitsui-shopping-park.com/lalaport/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_ららぽーとバナー_244_80.png"
+                                    alt="三井ショッピングパーク ららぽーと"></a>
+                        </li>
+                        <li><a href="https://mitsui-shopping-park.com/mop/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_MOPバナー.png" alt="三井アウトレットパーク"></a>
+                        </li>
+                        <li><a href="https://mitsui-shopping-park.com/urban/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_urban.png" alt="三井ショッピングパークアーバン"></a>
+                        </li>
+                        <li><a href="http://www.tobahotel.co.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/31トップページ/img/すまい用_鳥羽バナーPNG.png" alt="鳥羽国際ホテル"></a>
+                        </li>
+                        <li><a href="https://www.celestinehotels.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_celestine.png" alt="ザ セレスティンホテルズ"></a>
+                        </li>
+                        <li><a href="https://www.gardenhotels.co.jp/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_mgh.png" alt="三井ガーデンホテル"></a></li>
+                        <li><a href="https://www.sequencehotels.com/" target="_blank"><img
+                                    src="/content/dam/31sumai/etc/common/img/bnr_sequence.png" alt="sequence"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="footer_inner" class="cf">
+                <div>
+                    <div class="footer_logo onlysp">
+                        <a href="https://www.31sumai.com/"><img
+                                src="/apps/settings/wcm/designs/31sumai/common/img/logo_header01.png" alt="三井のすまい"></a>
+                    </div>
+                    <ul id="footer_nav03" class="cf">
+                        <li><a href="https://www.31sumai.com/sitemap/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>サイトマップ
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/about/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>ご利用上の注意
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/thing/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>物件情報について
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/privacy/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>個人情報保護方針
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/privacy/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>個人情報のお取り扱いについて
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/specific/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>特定個人情報基本方針
+                            </a></li>
+                        <li><a href="https://www.mfr.co.jp/policy/social/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>ソーシャルメディアガイドライン
+                            </a></li>
+                        <li><a href="https://www.mfr.co.jp/terms/cookie_accesslog"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>Cookieおよびアクセスログについて
+                            </a></li>
+                        <li><a href="https://www.31sumai.com/pid/help/"> <i class="fa fa-caret-right onlypc"
+                                    aria-hidden="true"></i>サイトの使い方
+                            </a></li>
+                    </ul>
+                </div>
+                <div id="copyright">
+                    <div class="btn_pagetop cf">
+                        <a href="#"> <i class="fa fa-caret-up"></i>
+                        </a>
+                    </div>
+                    <a href="http://www.mfr.co.jp/" target="_blank"><img
+                            src="/apps/settings/wcm/designs/31sumai/common/img/logo_header02.svg"
+                            alt="三井不動産レジデンシャル"></a>
+                    <small>Copyright
+                        &copy; Mitsui Fudosan Residential Co.,Ltd. All Rights Reserved.</small>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+@charset "utf-8";
+/* ============================================================ */
+/* header */
+/* ============================================================ */
+header {
+	border-top: 4px solid #222c81;
+}
+
+header #header_inner {
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+
+header p {
+	margin: 0 10px 0 0;
+	clear: right;
+	text-align: right;
+}
+
+
+/*----- #header_logo -----*/
+
+header #header_logo {
+	float: left;
+	margin: 20px 0 0 10px;
+}
+
+header #header_logo a {
+	display: block;
+	float: left;
+	margin: 0 10px 0 0;
+}
+header #header_logo a img{
+	height: auto;
+	width: 150px;
+}
+
+
+/*----- #resi_logo -----*/
+header .resi_logo{
+	float: right;
+	margin-top: 20px;
+}
+header .resi_logo img{
+	height: 36px;
+	width: auto;
+}
+/*----- #heder_nav -----*/
+
+header #heder_nav {
+	float: right;
+	margin: 37px 0 24px 0;
+	font-size: 12px;
+	font-size: 1.2rem;
+	line-height: 1.0;
+}
+
+header #heder_nav ul {
+	overflow: hidden;
+	margin-right: 20px;
+	float: right;
+}
+header #heder_nav ul li {
+	float: left;
+	margin-left: 20px;
+}
+
+header #heder_nav ul li a {
+	text-decoration: none;
+}
+
+header #heder_nav ul li a i{
+	margin-right: 5px;
+}
+
+header #heder_nav ul li a:hover {
+	text-decoration: underline;
+}
+
+header #heder_nav .fav_bt {
+	padding-top: 10px;
+	padding-right: 20px;
+	clear: both;
+	float: right;
+}
+header #heder_nav .fav_bt a{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+header #heder_nav .fav_bt i{
+	margin-right: 0.2em;
+}
+header #heder_nav ul li.username a .name{
+	line-height: 1;
+	display: inline-block;
+	width: 5em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+header .catch_copy {
+	position: absolute;
+	top: 22px;
+	left: 171px;
+	font-size: 11px;
+	font-size: 1.1rem;
+	text-align: left;
+	line-height: 1.4;
+}
+
+/* ============================================================ */
+/* header (31標準1カラムヘッダ(簡易版)) */
+/* ============================================================ */
+header.simple{
+	border-top: 0;
+	background-color: #fcfcfc;
+	border-bottom: 1px solid #f3f3f3;
+}
+header.simple .catch_copy{
+	line-height: 20px;
+  left: 116px;
+  top: 10px;
+	display: none;
+}
+header.simple .catch_copy br{
+}
+header.simple #header_logo {
+	float: left;
+	margin: 10px 0 10px 10px;
+	line-height: 0;
+}
+header.simple #header_logo img{
+	height: 20px;
+	width: auto;
+}
+header.simple #heder_nav{
+	margin: 10px 10px 10px 0;
+}
+header.simple #heder_nav ul{
+	padding: 0;
+	float: left;
+	line-height: 20px;
+}
+header.simple #heder_nav .fav_bt{
+	clear: none;
+	padding: 0;
+	float: left;
+}
+header.simple .resi_logo{
+	margin-top: 10px;
+	line-height: 0;
+}
+header.simple .resi_logo img{
+	height: 20px;
+	width: auto;
+}
+/* ============================================================ */
+/* header (会員系、資料請求、来場予約、標準1カラムヘッダ) */
+/* ============================================================ */
+header.header_personal {
+	border-bottom:4px solid #e8e9f2;
+}
+header.header_personal h1 {
+	float: left;
+	margin: 15px 0 10px 10px;
+	line-height: 44px;
+	font-weight: bold;
+	font-size: 2.4rem;
+}
+header.header_personal h1:before {
+	content: "\f10c";
+	display: inline-block;
+  font-family: FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+	margin-right: 0.5em;
+	color: #222c81;
+	font-size: 2.4rem;
+}
+header.header_personal .header_logo {
+	float: right;
+	margin: 15px 10px 10px 0;
+}
+header.header_personal .header_logo img{
+	height: auto;
+	width: 150px;
+}
+
+/* ============================================================ */
+/* メンテナンス表示 */
+/* ============================================================ */
+.maintenance{
+	border-bottom: 1px solid #dadada;
+}
+.maintenance .maintenance_inner{
+	width: 1000px;
+	margin: 10px auto;
+	background: #F6F6F6;
+	color: #f00;
+	padding: 20px;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+	border: 2px solid #f00;
+}
+
+/* ============================================================ */
+/* smartphone */
+/* ============================================================ */
+@media screen and (max-width:640px) {
+	header #header_inner{
+		width: auto;
+	}
+	header #header_logo{
+		width: 30%;
+		height: 50px;
+		margin: 0;
+		padding: 0 0 0 10px;
+		box-sizing: border-box;
+		display: table;
+	}
+	header #header_logo a{
+		margin: 0;
+		padding: 0;
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+	}
+	header #header_logo a img{
+		display: inline;
+	}
+	header .resi_logo{
+		float: left;
+		width: 30%;
+		margin: 0;
+		padding: 2%;
+		box-sizing: border-box;
+	}
+	header #heder_nav{
+		margin:0;
+		display: table;
+	}
+	header #heder_nav{
+		margin: 0;
+		width: 70%;
+		height: 50px;
+		position: relative;
+	}
+	header #heder_nav ul{
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+		margin: 0;
+		padding-right: 110px;
+	}
+	header #heder_nav ul li{
+		margin-left: 10px;
+	}
+	header #heder_nav ul li a{
+	}
+	header #heder_nav ul li.username{
+	}
+	header #heder_nav ul li.username a{
+	}
+	header #heder_nav ul li.username a .suffix{
+	}
+	header #heder_nav .fav_bt{
+		padding: 0;
+		width: 55px;
+		height: 50px;
+		display: table;
+		position: absolute;
+		top: 0;
+		right: 55px;
+	}
+	header #heder_nav .fav_bt a{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0;
+		box-sizing: border-box;
+		font-size: 0.9rem;
+		position: relative;
+		-webkit-border-radius: 0px;
+		-moz-border-radius: 0px;
+		border-radius: 0px;
+	}
+	header #heder_nav .fav_bt a i{
+		display: block;
+		font-size:20px;
+		padding-bottom: 4px;
+		margin: 0;
+	}
+	header #heder_nav .fav_bt a .fav_counter{
+		position: absolute;
+		bottom: 45%;
+		right: 12%;
+		background-color: #fff;
+		display: inline-block;
+		font-size: 9px;
+		line-height: 1;
+		padding: 2px 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}
+	header #heder_nav .gnavi_bt{
+		width: 55px;
+		height: 50px;
+		display: table;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	header #heder_nav .gnavi_bt a{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: #222c81;
+		color: #fff;
+		font-size: 0.9rem;
+		text-decoration: none;
+	}
+	header #heder_nav .gnavi_bt a i{
+		display: block;
+		font-size:20px;
+		padding-bottom: 4px;
+		margin: 0;
+	}
+	header .catch_copy{
+		position: relative;
+		clear: both;
+		font-size: 0.9rem;
+		top: auto;
+		left: auto;
+		line-height: 1;
+		background-color: #f6f6f6;
+		padding: 5px 10px;
+		margin: 0;
+	}
+	header .catch_copy br{
+		display: none;
+	}
+
+	/* ============================================================ */
+	/* header (31標準1カラムヘッダ(簡易版)) */
+	/* ============================================================ */
+	header.simple{
+	}
+	header.simple #header_logo{
+		width: 20%;
+		height: 40px;
+    margin: 0;
+		box-sizing: border-box;
+	}
+	header.simple #header_logo img{
+		width: auto;
+		height: auto;
+	}
+	header.simple #heder_nav{
+		margin: 0;
+		width: 80%;
+		height: 40px;
+		position: relative;
+	}
+	header.simple #heder_nav ul{
+		display: table-cell;
+		vertical-align: middle;
+		float: none;
+		margin: 0;
+		padding-right: 30%;
+	}
+	header.simple #heder_nav ul li{
+	}
+	header.simple #heder_nav ul li a{
+	}
+	header.simple #heder_nav ul li.username{
+	}
+	header.simple #heder_nav ul li.username a{
+	}
+	header.simple #heder_nav ul li.username a .name{
+	}
+	header.simple #heder_nav ul li.username a .suffix{
+	}
+	header.simple #heder_nav .fav_bt{
+		position: absolute;
+		right: 0;
+		top: 0;
+		display: table;
+		width: 30%;
+		height: 40px;
+	}
+	header.simple #heder_nav .fav_bt a{
+		display: table-cell;
+		vertical-align: middle;
+		white-space: nowrap;
+		padding: 0 10px;
+	}
+	header.simple #heder_nav .fav_bt a i{
+		display: inline-block;
+		font-size: 0.9rem;
+		margin-right: 0.3em;
+	}
+	header.simple #heder_nav .fav_bt a .fav_counter{
+		position: relative;
+		top: auto;
+		right: auto;
+		bottom: auto;
+	}
+	header.simple .catch_copy{
+		display: none;
+	}
+	/* ============================================================ */
+	/* header (会員系、資料請求、来場予約、標準1カラムヘッダ) */
+	/* ============================================================ */
+	header.header_personal .header_inner{
+		display: table;
+	}
+	header.header_personal h1,
+	header.header_personal .header_logo{
+		display: table-cell;
+		vertical-align: middle;
+		height: 44px;
+	}
+	header.header_personal h1 {
+		float: none;
+		margin: 0;
+		width: 70%;
+		font-size: 1.2rem;
+		padding-left: 10px;
+		line-height: inherit;
+	}
+	header.header_personal h1:before {
+		font-size: 1.6rem;
+	}
+	header.header_personal .header_logo {
+		float: none;
+		margin: 0;
+		width: 30%;
+		padding-right: 10px;
+	}
+}

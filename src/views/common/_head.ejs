@@ -1,45 +1,88 @@
-<!doctype html>
-<html lang="<%= lang %>">
+<!DOCTYPE html>
+<html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title><%= conf.title %></title>
-    <meta name="description" content="<%= conf.description %>">
+    <!-- 固定読み込みCSSファイル -->
+    <link rel="stylesheet" href="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/css/style.css" charset="utf-8">
+    <!-- ********** AEM dialog input start ********** -->
+    <meta charset="utf-8">
 
-    <meta itemprop="name" content="<%= conf.title %>" />
-    <meta itemprop="description" content="<%= conf.description %>" />
-<% if (typeof conf.metaImage === 'string') { %>
-    <meta itemprop="image" content="<%- conf.metaImage %>" />
-<% } %>
-
-    <meta property="og:title" content="<%= conf.title %>" />
-    <meta property="og:description" content="<%= conf.description %>" />
-<% if (typeof og === 'object') { %>
-    <meta property="og:type" content="<%= og.type %>" />
-    <meta property="og:image" content="<%= og.image %>" />
-    <meta property="og:url" content="<%= og.url %>" />
-    <meta property="og:site_name" content="<%= og.siteName %>" />
-<% } %>
-
-<% if (typeof twitter === 'object') { %>
-    <meta name="twitter:card" content="<%= twitter.card %>" />
-    <meta name="twitter:site" content="<%= twitter.site %>" />
-<% } %>
-
-    <link rel="stylesheet" href="/css/common.css">
+    <!-- *************************************** 編集可能領域 head start *************************************** -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- レスポンシブサイトの場合は下記を有効化 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- レスポンシブサイトではない場合は下記を有効化 -->
+    <!-- <meta name="viewport" content="width=1000" /> -->
+    <meta name="keywords" content="{物件名},{市区町村名},{沿線名},{駅名},新築マンション,分譲マンション,三井の住まい,31sumai.com,三井不動産レジデンシャル">
+    <meta name="description" content="{物件名}は{市区町村名}に⽴地する三井不動産レジデンシャルの新築・分譲マンションです。三井の住まい(31sumai.com)は、新築マンション・分譲マンションの住まい情報総合サイトです。">
+    <title>【公式】{物件名}｜三井不動産レジデンシャル：三井の住まい｜{市区町村名}の新築・分譲マンション</title>
+    <meta name="format-detection" content="telephone=no,address=no,email=no" />
+    <link rel="canonical" href="https://www.31sumai.com/mfr/X0000.html">
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bootstrap.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/common.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/components.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/theme.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bukken-header.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/bukken-footer.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="/content/dam/31sumai/mfr/X0000/common/css/libs/font-awesome.min.css" media="all" />
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/jquery-3.1.1.min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/bootstrap.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/common.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/base.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/underscore-min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/jquery.colorbox-min.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/bukken-header.js"></script>
+    <script src="/content/dam/31sumai/mfr/X0000/common/js/plan_search.js"></script>
 <%
-    conf.style = conf.style || [];
-    if (typeof conf.style === 'string') {
-        conf.style = [conf.style];
-    }
-    conf.style.forEach(style => {
+conf.style = conf.style || [];
+if (typeof conf.style === 'string') {
+    conf.style = [conf.style];
+}
+conf.style.forEach(style => {
 %>
-    <link rel="stylesheet" href="<%= style.match(/^https?:/) != null ? style : `/css/${style}` %>">
+<link rel="stylesheet" href="<%= style.match(/^https?:/) != null ? style : `${style}` %>">
 <% }) %>
-<% if (typeof conf.ldJson === 'object') { %>
-    <script type="application/ld+json"><%- JSON.stringify(conf.ldJson) %></script>
-<% } %>
+    <!-- /*************************************** 編集可能領域 head end *************************************** -->
+    <script type="text/javascript" src="//typesquare.com/accessor/script/typesquare.js?~lNOE73dL9E%3D&fadein=10" charset="utf-8"></script>
+    <!-- /********** AEM dialog input end ********** -->
+    <!-- 固定読み込みJSファイル -->
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/jQuery-bukkenMigration.js" charset="utf-8"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/script.js" charset="utf-8"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/base.js"></script>
+    <script src="https://www.31sumai.com/apps/settings/wcm/designs/31sumai/mfr/migration/js/carousel.js"></script>
+
+    <script type="text/javascript">
+        var bukken_obj = {
+            "id": "",
+            "name": "",
+            "pageURL": "/mfr/",
+            "thumbnailURL": "",
+            "message": "",
+            "categoryId": "",
+            "areaCode": "",
+            "buildingType": "",
+            "units": "",
+            "moveln": "",
+            "bisType": "",
+            "brandLogoId": "",
+            "JVCode": "",
+            "divType": "",
+            "allianceFlg": "",
+            "address": "",
+            "traffic": "",
+            "devEnvFlg": "",
+            "status": "",
+            "dataType": "bukken"
+        }
+    </script>
+    <script src="//assets.adobedtm.com/05c035d020eb682193974a42b73368b2a72c73a8/satelliteLib-dfb4eaa18c8943b69a02d7895d1fd500140ffb51.js"></script>
 
 </head>
+
 <body>
+    <div class="section"></div>
+    <div class="iparys_inherited"></div>
+    <article id="" class="">
+        <!-- ********** AEM dialog input start ********** -->
+
+        <!-- *************************************** 編集可能領域 body(メインコンテンツ) start *************************************** -->
