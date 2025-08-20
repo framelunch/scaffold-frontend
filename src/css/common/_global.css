@@ -1,6 +1,22 @@
 @import "libraries-frontend-framelunch/css/_variables.css";
 @import "libraries-frontend-framelunch/css/_keyframes.css";
 
+body {
+    font-family: var(--fontFamily-base);
+}
+
+/* stylelint-disable-next-line */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+pre {
+    font-family: var(--fontFamily-mono);
+    font-weight: var(--fontWeight-normal);
+}
+
 .-hidden-pc {
     @media (--not-sp) {
         display: none !important;

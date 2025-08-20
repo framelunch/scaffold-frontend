@@ -93,7 +93,7 @@ exports.script = {
   src: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/_*', '!src/components/**/*', '!src/assets/**/*'],
   watch: ['src/**/*.{js,jsx,ts,tsx}', 'src/components/**/*.{js,jsx,ts,tsx}'],
   entry: {
-    'mfr/X0000/js/index': './src/js/index.js',
+    'js/index': './src/js/index.js',
   },
 };
 
